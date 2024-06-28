@@ -1,7 +1,6 @@
 <template>
   <SliderComponent />
   <div class="content">
-
     <WelcomeComponent />
   </div>
 </template>
@@ -14,6 +13,6 @@ import WelcomeComponent from "@/components/WelcomeComponent.vue";
 .content {
   position: relative;
   z-index: 100;
-  margin-top: 100vh; 
+  margin-top: 100vh;
 }
 </style>

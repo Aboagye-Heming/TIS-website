@@ -18,3 +18,7 @@ p {
 .container {
   padding: 0 1rem;
 }
+
+html {
+  scroll-behavior: smooth;
+}
