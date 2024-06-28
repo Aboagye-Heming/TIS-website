@@ -36,8 +36,6 @@ const isMenuOpen = ref(false);
 const navLinks = [
   { to: "/", text: "Home" },
   { to: "/about", text: "About" },
-  // { to: "/skills", text: "Skills" },
-  // { to: "/projects", text: "Projects" },
   { to: "/contact", text: "Contact" },
 ];
 
@@ -71,11 +69,11 @@ onUnmounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .navbar-container {
