@@ -135,7 +135,7 @@
               alt="Grade 6 Boys Graduation"
               class="event-image"
             />
-            <p class="event-subtitle">2024 Grade 6 Graduation (Gentelmen)</p>
+            <p class="event-subtitle">2024 Grade 6 Graduation (Gentlemen)</p>
           </div>
         </div>
       </div>
