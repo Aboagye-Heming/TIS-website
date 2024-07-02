@@ -5,7 +5,7 @@
         <!-- Image Section -->
         <div class="col-sm-4 welcome-image-container">
           <img
-            src="../assets/images/kg_arts.jpg"
+            src="@/assets/images/art_show.jpg"
             alt="School Image"
             class="welcome-image"
           />
@@ -43,7 +43,7 @@
         <div class="recent-events-gallery">
           <div class="recent-event">
             <img
-              src="../assets/images/kg_graduation.jpg"
+              src="@/assets/images/art_show.jpg"
               alt="Kindergarten Graduation"
               class="event-image"
             />
@@ -51,24 +51,24 @@
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/santakids.jpg"
-              alt="Kids with Santa"
+            src="@/assets/images/art_show.jpg"
+            alt="Kids with Santa"
               class="event-image"
             />
             <p class="event-subtitle">Santa day</p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/sec_sports.jpg"
-              alt="Secondary School Sports Event"
+            src="@/assets/images/art_show.jpg"
+            alt="Secondary School Sports Event"
               class="event-image"
             />
             <p class="event-subtitle">Secondary School Sports Event</p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/kg_kids_drone_shot.jpg"
-              alt="Kindergarten Kids Drone Shot"
+            src="@/assets/images/art_show.jpg"
+            alt="Kindergarten Kids Drone Shot"
               class="event-image"
             />
             <p class="event-subtitle">Kindergarten Kids Drone Shot</p>
@@ -83,56 +83,58 @@
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/20240216_150432.jpg"
-              alt="Outdoor Classroom Activity"
+            src="@/assets/images/art_show.jpg"
+            alt="Outdoor Classroom Activity"
               class="event-image"
             />
             <p class="event-subtitle">Outdoor Activities</p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/kg_learning.jpg"
-              alt="Kindergarten Learning"
+            src="@/assets/images/art_show.jpg"
+            alt="Kindergarten Learning"
               class="event-image"
             />
             <p class="event-subtitle">Kindergarten Learning</p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/audience.jpg"
-              alt="School Event Audience"
+            src="@/assets/images/art_show.jpg"
+            alt="School Event Audience"
               class="event-image"
             />
             <p class="event-subtitle">Students enjoying tiktok show</p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/excursion_with_teacher.jpg"
-              alt="Excursion with Teacher"
+            src="@/assets/images/art_show.jpg"
+            alt="Excursion with Teacher"
               class="event-image"
             />
             <p class="event-subtitle">Excursion with Teacher</p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/grade_6_girls_graduation.jpg"
-              alt="Grade 6 Girls Graduation"
+            src="@/assets/images/art_show.jpg"
+            alt="Grade 6 Girls Graduation"
               class="event-image"
             />
             <p class="event-subtitle">2024 Grade 6 Graduation (Ladies)</p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/grade_6_graduation.jpg"
-              alt="Grade 6 Graduation"
+            src="@/assets/images/art_show.jpg"
+            alt="Grade 6 Graduation"
               class="event-image"
             />
-            <p class="event-subtitle">2024 Grade 6 Graduation with class teachers</p>
+            <p class="event-subtitle">
+              2024 Grade 6 Graduation with class teachers
+            </p>
           </div>
           <div class="recent-event">
             <img
-              src="../assets/images/grade_6_boys_graduation.jpg"
-              alt="Grade 6 Boys Graduation"
+            src="@/assets/images/art_show.jpg"
+            alt="Grade 6 Boys Graduation"
               class="event-image"
             />
             <p class="event-subtitle">2024 Grade 6 Graduation (Gentlemen)</p>
