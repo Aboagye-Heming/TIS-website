@@ -10,9 +10,24 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/about-takoradi-international-school",
+      name: "about-takoradi-international-school",
       component: () => import("../views/AboutPage.vue"),
+    },
+    {
+      path: "/about/our-history",
+      name: "history",
+      component: () => import("../views/HistoryPage.vue"),
+    },
+    {
+      path: "/about/principal's-message",
+      name: "message",
+      component: () => import("../views/PrincipalMessage.vue"),
+    },
+    {
+      path: "/about/departments",
+      name: "departments",
+      component: () => import("../views/DepartmentsPage.vue"),
     },
     {
       path: "/contact",

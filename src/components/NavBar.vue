@@ -14,7 +14,34 @@
         </div>
         <ul :class="{ 'nav-menu active': isMenuOpen, 'nav-menu': !isMenuOpen }">
           <li class="nav-item" v-for="link in navLinks" :key="link.to">
+            <div v-if="link.subLinks" class="dropdown">
+              <span
+                class="nav-links dropdown-toggle"
+                @click="toggleDropdown(link.text)"
+                :class="{ active: isDropdownOpen(link.text) }"
+                >{{ link.text }}</span
+              >
+              <ul
+                v-if="isDropdownOpen(link.text)"
+                class="dropdown-menu"
+                :class="{ 'dropdown-menu active': isDropdownOpen(link.text) }"
+              >
+                <li
+                  v-for="subLink in link.subLinks"
+                  :key="subLink.to"
+                  class="dropdown-item"
+                >
+                  <router-link
+                    :to="subLink.to"
+                    class="nav-links"
+                    @click="closeMenu"
+                    >{{ subLink.text }}</router-link
+                  >
+                </li>
+              </ul>
+            </div>
             <router-link
+              v-else
               :to="link.to"
               class="nav-links"
               @click="closeMenu"
@@ -27,15 +54,24 @@
     </nav>
   </div>
 </template>
-
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
 const isMenuOpen = ref(false);
+const openDropdown = ref(null);
 
 const navLinks = [
   { to: "/", text: "Home" },
-  { to: "/about", text: "About" },
+  {
+    to: "/about",
+    text: "About",
+    subLinks: [
+      { to: "/about/our-history", text: "Our History" },
+      { to: "/about-takoradi-international-school", text: "About TIS" },
+      { to: "/about/principal's-message", text: "Principal's Welcome Message" },
+      { to: "/about/departments", text: "Departments" },
+    ],
+  },
   { to: "/contact", text: "Contact" },
 ];
 
@@ -45,6 +81,15 @@ function toggleMenu() {
 
 function closeMenu() {
   isMenuOpen.value = false;
+  openDropdown.value = null;
+}
+
+function toggleDropdown(linkText) {
+  openDropdown.value = openDropdown.value === linkText ? null : linkText;
+}
+
+function isDropdownOpen(linkText) {
+  return openDropdown.value === linkText;
 }
 
 function handleClickOutside(event) {
@@ -61,7 +106,6 @@ onUnmounted(() => {
   window.removeEventListener("click", handleClickOutside);
 });
 </script>
-
 <style scoped>
 .navbar {
   background-color: #fff;
@@ -69,7 +113,7 @@ onUnmounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -153,6 +197,7 @@ onUnmounted(() => {
 .nav-links:hover {
   color: #40c055;
 }
+
 .nav-links.active {
   color: #00ff2a;
   font-weight: bold;
@@ -167,7 +212,7 @@ onUnmounted(() => {
     display: flex;
     flex-direction: column;
     width: 35%;
-    height: 180px;
+    height: auto;
     position: absolute;
     top: 50px;
     left: -100%;
@@ -186,8 +231,6 @@ onUnmounted(() => {
   .nav-item {
     width: 100%;
     margin-bottom: 40px;
-
-
   }
 
   .nav-links {
@@ -195,6 +238,43 @@ onUnmounted(() => {
     padding: 16px;
     width: 100%;
   }
-  
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: ' ▼';
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  padding: 12px 0;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.dropdown-menu.active {
+  display: flex;
+}
+
+.dropdown-item {
+  padding: 12px 24px;
+}
+
+.dropdown-item .nav-links {
+  color: #84dd84;
+}
+
+.dropdown-item .nav-links:hover {
+  color: #40c055;
 }
 </style>
