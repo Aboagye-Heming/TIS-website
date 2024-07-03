@@ -10,7 +10,7 @@
               alt="Our History Image"
               class="history-image"
             />
-            <img
+            <!-- <img
               src="@/assets/images/fistpumps.jpg"
               alt="Our History Image"
               class="history-image"
@@ -19,7 +19,7 @@
               src="@/assets/images/art_show.jpg"
               alt="Our History Image"
               class="history-image"
-            />
+            /> -->
           </div>
           <div class="history-text">
             <p>

@@ -70,6 +70,7 @@ const navLinks = [
       { to: "/about-takoradi-international-school", text: "About TIS" },
       { to: "/about/principal's-message", text: "Principal's Welcome Message" },
       { to: "/about/departments", text: "Departments" },
+      { to: "/about/gallery", text: "Gallery" },
     ],
   },
   { to: "/contact", text: "Contact" },

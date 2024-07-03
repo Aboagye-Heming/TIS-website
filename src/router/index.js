@@ -30,6 +30,11 @@ const router = createRouter({
       component: () => import("../views/DepartmentsPage.vue"),
     },
     {
+      path: "/about/gallery",
+      name: "gallery",
+      component: () => import("../views/GalleryPage.vue"),
+    },
+    {
       path: "/contact",
       name: "contact",
       component: () => import("../views/ContactPage.vue"),
@@ -41,7 +46,7 @@ const router = createRouter({
     } else {
       return { top: 0 };
     }
-  }
+  },
 });
 
 export default router;

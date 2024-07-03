@@ -1,3 +1,5 @@
+<!-- WelcomeSection.vue -->
+
 <template>
   <section class="welcome-section">
     <div class="container">
@@ -33,112 +35,7 @@
               Year 11.
             </p>
           </div>
-        </div>
-      </div>
-      <!-- Recent Events Section -->
-      <div class="recent-events">
-        <div class="recent-events-headline">
-          <h3>Gallery</h3>
-        </div>
-        <div class="recent-events-gallery">
-          <div class="recent-event">
-            <img
-              src="@/assets/images/art_show.jpg"
-              alt="Kindergarten Graduation"
-              class="event-image"
-            />
-            <p class="event-subtitle">Kindergarten Graduation</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Kids with Santa"
-              class="event-image"
-            />
-            <p class="event-subtitle">Santa day</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Secondary School Sports Event"
-              class="event-image"
-            />
-            <p class="event-subtitle">Secondary School Sports Event</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Kindergarten Kids Drone Shot"
-              class="event-image"
-            />
-            <p class="event-subtitle">Kindergarten Kids Drone Shot</p>
-          </div>
-          <div class="recent-event">
-            <img
-              src="../assets/images/fistpumps.jpg"
-              alt="Fist Pumps Celebration"
-              class="event-image"
-            />
-            <p class="event-subtitle">Fist Pumps Celebration</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Outdoor Classroom Activity"
-              class="event-image"
-            />
-            <p class="event-subtitle">Outdoor Activities</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Kindergarten Learning"
-              class="event-image"
-            />
-            <p class="event-subtitle">Kindergarten Learning</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="School Event Audience"
-              class="event-image"
-            />
-            <p class="event-subtitle">Students enjoying tiktok show</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Excursion with Teacher"
-              class="event-image"
-            />
-            <p class="event-subtitle">Excursion with Teacher</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Grade 6 Girls Graduation"
-              class="event-image"
-            />
-            <p class="event-subtitle">2024 Grade 6 Graduation (Ladies)</p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Grade 6 Graduation"
-              class="event-image"
-            />
-            <p class="event-subtitle">
-              2024 Grade 6 Graduation with class teachers
-            </p>
-          </div>
-          <div class="recent-event">
-            <img
-            src="@/assets/images/art_show.jpg"
-            alt="Grade 6 Boys Graduation"
-              class="event-image"
-            />
-            <p class="event-subtitle">2024 Grade 6 Graduation (Gentlemen)</p>
-          </div>
+          <!-- <router-link to="/gallery" class="btn btn-primary">View Gallery</router-link> -->
         </div>
       </div>
     </div>
@@ -148,6 +45,7 @@
 <script setup></script>
 
 <style scoped>
+/* Add scoped styles for your welcome section */
 .welcome-section {
   background-color: #f8f8f8;
   padding: 40px 0;
@@ -227,57 +125,5 @@
 
 .welcome-content a:hover {
   text-decoration: underline;
-}
-
-.recent-events {
-  margin-top: 40px;
-}
-
-.recent-events-headline {
-  margin-bottom: 20px;
-  color: green;
-  text-align: center;
-}
-
-.recent-events-headline h3 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.recent-events-gallery {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.recent-event {
-  flex: 1 1 30%;
-  max-width: 30%;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .recent-event {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-.event-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.event-image:hover {
-  transform: scale(1.05);
-}
-
-.event-subtitle {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #666;
 }
 </style>
