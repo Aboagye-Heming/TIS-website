@@ -100,12 +100,13 @@
 
 .welcome-headline {
   margin-bottom: 20px;
+
   color: green;
 }
 
 .welcome-headline h3 {
-  font-size: 24px;
   font-weight: bold;
+  font-size: 32px;
   margin: 0;
 }
 

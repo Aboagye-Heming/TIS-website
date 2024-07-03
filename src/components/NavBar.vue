@@ -68,7 +68,7 @@ const navLinks = [
     subLinks: [
       { to: "/about/our-history", text: "Our History" },
       { to: "/about-takoradi-international-school", text: "About TIS" },
-      { to: "/about/principal's-message", text: "Principal's Welcome Message" },
+      { to: "/about/principal's-message", text: "Principal's Message" },
       { to: "/about/departments", text: "Departments" },
       { to: "/about/gallery", text: "Gallery" },
     ],
@@ -246,7 +246,7 @@ onUnmounted(() => {
 }
 
 .dropdown-toggle::after {
-  content: ' ▼';
+  content: " ▼";
 }
 
 .dropdown-menu {
