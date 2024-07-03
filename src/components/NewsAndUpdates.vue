@@ -13,7 +13,7 @@
           <div class="news-content">
             <h3 class="news-title">{{ item.title }}</h3>
             <p class="news-description">{{ item.description }}</p>
-            <a :href="item.link" class="read-more">Read More</a>
+            <router-link :to="item.link" class="read-more">Read More</router-link>
           </div>
         </div>
       </transition-group>
@@ -53,7 +53,7 @@ const newsItems = ref([
 ]);
 
 const currentIndex = ref(0);
-const intervalTime = 30000; // 5 seconds
+const intervalTime = 5000; // 5 seconds
 
 setInterval(() => {
   currentIndex.value = (currentIndex.value + 1) % newsItems.value.length;
