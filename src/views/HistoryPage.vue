@@ -13,39 +13,41 @@
           </div>
           <div class="history-text">
             <p>
-              Our institution was founded in 1965 with the mission of providing
-              quality education to students from all backgrounds. Over the
-              decades, we have grown and evolved, adapting to the changing needs
-              of our community and the world. Today, we are proud to be a leader
-              in education, offering a diverse range of programs and services to
-              help our students succeed.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              vestibulum, libero ut viverra blandit, sapien augue placerat
+              libero, vel ultricies risus ipsum ac eros. Sed bibendum diam quis
+              sapien tincidunt, ut eleifend ex faucibus.
             </p>
             <p>
-              In the early years, our focus was on building a strong foundation
-              in traditional academic disciplines. As the world changed, so did
-              we. We embraced new technologies and teaching methods, integrating
-              them into our curriculum to ensure that our students are prepared
-              for the future.
+              Vestibulum vel nunc vel lorem sodales fermentum. Duis vehicula
+              lectus a velit lacinia, non sollicitudin orci lacinia. Aenean
+              aliquet, tortor a eleifend fringilla, purus libero dapibus eros,
+              ut feugiat arcu eros vel ligula. Nam ullamcorper tellus ut magna
+              accumsan, id dignissim dolor volutpat.
             </p>
             <p>
-              Throughout our history, we have remained committed to our core
-              values of integrity, excellence, and community. We believe that
-              education is not just about acquiring knowledge, but also about
-              developing character and building a better world. Our alumni are a
-              testament to this, as they go on to make significant contributions
-              in their chosen fields and communities.
+              Praesent aliquet lectus vel justo vehicula, a sodales velit
+              rhoncus. Nulla facilisi. Curabitur sed lectus et nisi elementum
+              facilisis. Quisque bibendum, turpis et gravida blandit, erat velit
+              congue massa, a vestibulum arcu felis sed urna.
             </p>
             <p>
-              As we look to the future, we are excited to continue our tradition
-              of excellence and innovation. We invite you to join us on this
-              journey, as we work together to create a brighter future for all.
+              Aliquam id lorem et felis hendrerit hendrerit ut a odio. Nullam
+              feugiat risus non nunc cursus, in tincidunt odio ultrices. Ut
+              sagittis, metus et commodo facilisis, est nunc malesuada lorem, in
+              faucibus justo leo non justo.
             </p>
             <p>
-              It was opened in 1998 as the Takoradi Learning Centre. It aimed at
-              providing a high standard of international education, following a
-              British educational-oriented programme. The school has since
-              grown, changed its name to Takoradi International School, and is
-              now providing education from kindergarten to senior secondary.
+              Sed posuere enim et orci pulvinar, a tristique nunc interdum.
+              Morbi non purus ac augue consequat elementum. Donec porttitor
+              bibendum sapien, a blandit felis laoreet eget. Nunc euismod
+              interdum urna nec condimentum.
+            </p>
+            <p>
+              Fusce condimentum lectus nec eros fermentum, in cursus magna
+              gravida. Proin sollicitudin mi nec lorem tempor, eget venenatis
+              nunc interdum. In faucibus sapien eu felis dignissim, a bibendum
+              tortor volutpat.
             </p>
           </div>
         </div>

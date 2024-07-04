@@ -16,7 +16,7 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "26 June 2024",
+  date: "9th Sepetember 2024",
   title: "Secondary School Speech, Prize-Giving & Graduation Day",
   description: "",
   link: "/event-details",

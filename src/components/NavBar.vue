@@ -197,11 +197,15 @@ onUnmounted(() => {
 
 .nav-links:hover {
   color: #40c055;
+  text-decoration: none;
+
 }
 
 .nav-links.active {
   color: #00ff2a;
   font-weight: bold;
+  text-decoration: none;
+
 }
 
 @media screen and (max-width: 960px) {
@@ -257,7 +261,7 @@ onUnmounted(() => {
   z-index: 1000;
   top: 100%;
   left: 0;
-  max-width: 240px;
+  width: 240px;
   padding: 12px 0;
   border-radius: 8px;
   flex-direction: column;
@@ -269,6 +273,8 @@ onUnmounted(() => {
 
 .dropdown-item {
   padding: 12px 24px;
+  text-decoration: none;
+
 }
 
 .dropdown-item .nav-links {

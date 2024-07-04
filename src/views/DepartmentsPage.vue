@@ -1,8 +1,7 @@
 <template>
-  <SliderComponent />
 
+  <HeaderTitle title="Departments" />
   <section class="departments-page">
-    <HeaderTitle title="Departments" />
     <div class="container">
       <section class="departments-content">
         <nav class="departments-nav">
@@ -41,7 +40,6 @@
 
 <script setup>
 import HeaderTitle from "@/components/HeaderTitle.vue";
-import SliderComponent from "@/components/sliderComponent.vue";
 
 import { ref } from "vue";
 
@@ -51,15 +49,10 @@ const departments = [
     items: [
       "Principal’s Office",
       "Sectional Vice Principal’s Offices",
-      "Office of Vice Principal, Administration",
-      "Marketing and Communications",
       "Human Resources & Administration",
-      "Office of Admissions",
       "Security and Safety Assurance",
       "Finance",
-      "Procurement",
       "Facilities",
-      "Technology Platform and Standards",
       "IT Systems",
       "Guidance & Counseling",
       "Health and Wellness",
@@ -86,20 +79,16 @@ const departments = [
     items: [
       "Art",
       "Biology",
-      "Economics and Business Studies",
       "Chemistry",
       "Physics",
-      "English Language",
-      "English as a Second Language",
-      "English Literature",
+      "English",
+      "French",
       "ICT",
       "Library",
       "Mathematics",
-      "Modern Languages (French and Spanish)",
       "Social Studies (History and Geography)",
       "Music",
       "Physical Education and Sports",
-      "Special Education Needs",
     ],
   },
 ];
@@ -130,6 +119,9 @@ function toggleDepartment(index) {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   margin-top: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .departments-header {

@@ -81,7 +81,6 @@ import UpcomingEvents from "@/components/UpcomingEvents.vue";
   background-color: #f8f8f8;
   padding-bottom: 20px;
   margin-top: -1px;
-
 }
 
 /* .news-updates,
@@ -104,22 +103,23 @@ import UpcomingEvents from "@/components/UpcomingEvents.vue";
     flex-direction: column;
     align-items: center;
     padding: 20px;
-      gap: 20px;
-
+    gap: 20px;
   }
 
   .news-updates,
   .upcoming-events {
     max-width: 100%;
     padding: 0px;
-
   }
 }
 @media (min-width: 768px) {
-  
   .upcoming-events {
     padding-left: 20px;
-
+  }
+}
+@media (min-width: 960px) {
+  .upcoming-events {
+    padding-left: 150px;
   }
 }
 </style>
