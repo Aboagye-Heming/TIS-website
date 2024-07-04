@@ -257,7 +257,7 @@ onUnmounted(() => {
   z-index: 1000;
   top: 100%;
   left: 0;
-  width: 200px;
+  max-width: 240px;
   padding: 12px 0;
   border-radius: 8px;
   flex-direction: column;

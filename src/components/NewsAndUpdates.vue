@@ -13,7 +13,9 @@
           <div class="news-content">
             <h3 class="news-title">{{ item.title }}</h3>
             <p class="news-description">{{ item.description }}</p>
-            <router-link :to="item.link" class="read-more">Read More</router-link>
+            <!-- <router-link :to="item.link" class="read-more"
+              >Read More</router-link
+            > -->
           </div>
         </div>
       </transition-group>
@@ -63,8 +65,8 @@ setInterval(() => {
 <style scoped>
 .news-updates {
   background-color: #f8f8f8;
-  padding: 10px 0 40px 0;
   text-align: center;
+  width: 100%;
 }
 
 .section-title {
@@ -72,12 +74,13 @@ setInterval(() => {
   font-weight: bold;
   color: green;
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 20px;
 }
 
@@ -100,7 +103,6 @@ setInterval(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -126,20 +128,20 @@ setInterval(() => {
 }
 
 .news-title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #2c3e50;
 }
 
 .news-description {
-  font-size: 16px;
+  font-size: 14px;
   color: #666;
   margin-bottom: 15px;
 }
 
 .read-more {
-  font-size: 16px;
+  font-size: 14px;
   color: #3498db;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -161,6 +163,7 @@ setInterval(() => {
   .news-image {
     max-width: 300px;
   }
+  
 }
 
 .slide-enter-active,

@@ -1,5 +1,3 @@
-<!-- WelcomeSection.vue -->
-
 <template>
   <section class="welcome-section">
     <div class="container">
@@ -69,18 +67,6 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 576px) {
-  .col-sm-4 {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-  }
-
-  .col-sm-8 {
-    flex: 0 0 66.6666%;
-    max-width: 66.6666%;
-  }
-}
-
 .welcome-image-container {
   text-align: center;
   margin-bottom: 20px;
@@ -126,5 +112,16 @@
 
 .welcome-content a:hover {
   text-decoration: underline;
+}
+@media (min-width: 960px) {
+  .col-sm-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  .col-sm-8 {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+  }
 }
 </style>
