@@ -407,6 +407,10 @@ li {
           begin to take an active role in making an impact on our evolving
           global society.
         </p>
+      </div>
+      <div class="content-block">
+        <h2>Classification</h2>
+
         <p>The school consists of:</p>
         <ul>
           <li>Early Years Foundation Stage (Kindergarten 1 & 2)</li>
@@ -438,8 +442,16 @@ li {
         <ul>
           <li>Progression tests - Years 3 to 6</li>
           <li>Primary Checkpoint - Year 6</li>
-          <li>Lower Secondary Checkpoint - Year 9</li>
-          <li>IGCSE - End of Year 11</li>
+          <li>
+            Lower Secondary Checkpoint— In Year 9 students sit the Cambridge
+            Checkpoint examinations, which have a closer association with the
+            IGCSE.
+          </li>
+          <li>
+            Students in the Years 10 and 11 study rigorously for the
+            International General Certificate of Secondary Education (IGCSE) at
+            the end of Year 11.
+          </li>
         </ul>
       </div>
 
