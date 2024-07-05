@@ -51,18 +51,20 @@ import UpcomingEvents from "@/components/UpcomingEvents.vue";
   <SliderComponent />
   <div class="content">
     <WelcomeComponent />
-    <div class="main-content">
+    <about/>
+    <!-- <div class="main-content">
       <UpcomingEvents class="upcoming-events" />
       <NewsAndUpdates class="news-updates" />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
 import SliderComponent from "@/components/sliderComponent.vue";
 import WelcomeComponent from "@/components/WelcomeComponent.vue";
-import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
-import UpcomingEvents from "@/components/UpcomingEvents.vue";
+import about from "@/views/AboutPage.vue";
+// import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
+// import UpcomingEvents from "@/components/UpcomingEvents.vue";
 </script>
 
 <style scoped>
