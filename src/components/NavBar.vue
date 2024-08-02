@@ -2,7 +2,9 @@
   <div>
     <nav class="navbar">
       <div class="navbar-container">
-        <router-link to="/" class="nav-logo">TIS</router-link>
+        <router-link to="/" class="nav-logo"
+          >Takoradi International School</router-link
+        >
         <div
           class="menu-icon"
           :class="{ active: isMenuOpen }"
@@ -62,17 +64,17 @@ const openDropdown = ref(null);
 
 const navLinks = [
   { to: "/", text: "Home" },
-  // {
-  //   to: "/about",
-  //   text: "About",
-  //   subLinks: [
-  //     { to: "/about/our-history", text: "Our History" },
-  //     { to: "/about-takoradi-international-school", text: "About TIS" },
-  //     { to: "/about/principal's-message", text: "Principal's Message" },
-  //     { to: "/about/departments", text: "Departments" },
-  //     { to: "/about/gallery", text: "Gallery" },
-  //   ],
-  // },
+  {
+    to: "/about",
+    text: "About",
+    subLinks: [
+      // { to: "/about/our-history", text: "Our History" },
+      // { to: "/about-takoradi-international-school", text: "About TIS" },
+      // { to: "/about/principal's-message", text: "Principal's Message" },
+      // { to: "/about/departments", text: "Departments" },
+      { to: "/about/gallery", text: "Gallery" },
+    ],
+  },
   { to: "/contact", text: "Contact" },
 ];
 
@@ -110,7 +112,7 @@ onUnmounted(() => {
 <style scoped>
 .navbar {
   background-color: #fff;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,17 +200,18 @@ onUnmounted(() => {
 .nav-links:hover {
   color: #40c055;
   text-decoration: none;
-
 }
 
 .nav-links.active {
   color: #00ff2a;
   font-weight: bold;
   text-decoration: none;
-
 }
 
 @media screen and (max-width: 960px) {
+  .nav-logo {
+    font-size: 16px;
+  }
   .menu-icon {
     display: block;
   }
@@ -260,9 +263,10 @@ onUnmounted(() => {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   top: 100%;
-  left: 0;
-  width: 240px;
+  left: -26px;
+  width: 140px;
   padding: 12px 0;
+  margin-top: 10px;
   border-radius: 8px;
   flex-direction: column;
 }
@@ -274,7 +278,7 @@ onUnmounted(() => {
 .dropdown-item {
   padding: 12px 24px;
   text-decoration: none;
-
+  list-style: none;
 }
 
 .dropdown-item .nav-links {

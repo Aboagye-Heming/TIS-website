@@ -2,24 +2,28 @@
   <div class="slider">
     <div
       class="slide"
-      v-for="(image, index) in images"
+      v-for="(item, index) in images"
       :key="index"
-      :style="{ backgroundImage: `url(${image})` }"
+      :style="{ backgroundImage: `url(${item.src})` }"
       :class="{ active: index === currentIndex }"
-      @click="goToSlide(index)"
-    ></div>
+    >
+      <div class="text-overlay">{{ item.text }}</div>
+    </div>
     <button class="prev" @click="prevSlide">&lt;</button>
     <button class="next" @click="nextSlide">&gt;</button>
   </div>
 </template>
-
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import image1 from "@/assets/images/art_show.jpg";
 import image2 from "@/assets/images/art_show.jpg";
 import image3 from "@/assets/images/art_show.jpg";
 
-const images = ref([image1, image2, image3]);
+const images = ref([
+  { src: image1, text: "Welcome to Takoradi International School" },
+  { src: image2, text: "Explore Our Campus" },
+  { src: image3, text: "Join Our Community" },
+]);
 
 const currentIndex = ref(0);
 let interval;
@@ -41,10 +45,6 @@ const prevSlide = () => {
 
 const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % images.value.length;
-};
-
-const goToSlide = (index) => {
-  currentIndex.value = index;
 };
 
 onMounted(() => {
@@ -70,7 +70,7 @@ onUnmounted(() => {
 
 .slide {
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -82,6 +82,20 @@ onUnmounted(() => {
 
 .slide.active {
   opacity: 1;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 0 20px;
 }
 
 button {
@@ -117,5 +131,29 @@ button {
 
 button:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 480px) {
+  .text-overlay {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-overlay {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-overlay {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-overlay {
+    font-size: 44px;
+  }
 }
 </style>

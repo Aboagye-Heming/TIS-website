@@ -667,7 +667,9 @@ export default {
 
 <style scoped>
 .about-section {
-  padding: 60px 0;
+  padding-bottom: 60px;
+  padding-left: 0px;
+  padding-right: 0px;
   background-color: #f9f9f9;
   margin-top: -2px;
 }
