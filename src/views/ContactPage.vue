@@ -40,11 +40,11 @@
             </div>
             <button type="submit">Send Message</button>
           </form>
-          <Toast
+          <!-- <Toast
             v-if="toast.visible"
             :message="toast.message"
             :type="toast.type"
-          />
+          /> -->
         </div>
         <div class="col-sm-4">
           <h4>Our Address</h4>
@@ -83,7 +83,7 @@
 <script setup>
 import { reactive } from 'vue';
 import emailjs from '@emailjs/browser';
-import Toast from '@/components/ToastLoader.vue';
+// import Toast from '@/components/ToastLoader.vue';
 
 const form = reactive({
   name: '',
