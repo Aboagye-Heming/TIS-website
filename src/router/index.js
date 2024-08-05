@@ -30,7 +30,7 @@ const router = createRouter({
       component: () => import("../views/DepartmentsPage.vue"),
     },
     {
-      path: "/about/gallery",
+      path: "/gallery",
       name: "gallery",
       component: () => import("../views/GalleryPage.vue"),
     },

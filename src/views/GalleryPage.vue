@@ -1,6 +1,6 @@
 <template>
   <div class="gallery-page">
-    <HeaderTitle title="Gallery" />
+    <!-- <HeaderTitle title="Gallery" /> -->
 
     <div class="container">
       <div class="recent-events">
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import HeaderTitle from "@/components/HeaderTitle.vue";
+// import HeaderTitle from "@/components/HeaderTitle.vue";
 
 // Import images
 import artShowImage from "@/assets/images/art_show.jpg";

@@ -16,7 +16,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import image1 from "@/assets/images/art_show.jpg";
-import image2 from "@/assets/images/art_show.jpg";
+import image2 from "@/assets/images/artshow.jpg";
 import image3 from "@/assets/images/art_show.jpg";
 
 const images = ref([
