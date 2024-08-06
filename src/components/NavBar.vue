@@ -64,17 +64,22 @@ const openDropdown = ref(null);
 
 const navLinks = [
   { to: "/", text: "Home" },
-  // {
-  //   to: "/about",
-  //   text: "About",
-  //   subLinks: [
-  //     { to: "/about/our-history", text: "Our History" },
-  //     { to: "/about-takoradi-international-school", text: "About TIS" },
-  //     { to: "/about/principal's-message", text: "Principal's Message" },
-  //     { to: "/about/departments", text: "Departments" },
-  //     { to: "/about/gallery", text: "Gallery" },
-  //   ],
-  // },
+  {
+    to: "/about",
+    text: "About",
+    subLinks: [
+      { to: "/about-takoradi-international-school", text: "About TIS" },
+      // { to: "/about-takoradi-international-schools", text: "About TIS" },
+      { to: "/about/principal's-message", text: "Schools" },
+      { to: "/management", text: "Management Team" },
+      { to: "/academic-programme", text: "Academic Programme" },
+      { to: "/facilities", text: "Facilities" },
+      { to: "/academic-calender-and-events", text: "Academic Calender And Events" },
+      { to: "/news-and-updates", text: "News And Updates" },
+      // { to: "/about/departments", text: "Departments" },
+      // { to: "/about/gallery", text: "Gallery" },
+    ],
+  },
   // { to: "/gallery", text: "Gallery" },
   { to: "/contact", text: "Contact" },
 ];

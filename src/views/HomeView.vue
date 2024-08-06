@@ -1,68 +1,19 @@
-<!-- <template>
-  <SliderComponent />
-  <div class="content">
-    <WelcomeComponent />
-    <div class="main-content">
-      <UpcomingEvents class="upcoming-events" />
-      <NewsAndUpdates class="news-updates" />
-    </div>
-  </div>
-</template>
-
-<script setup>
-import SliderComponent from "@/components/sliderComponent.vue";
-
-import WelcomeComponent from "@/components/WelcomeComponent.vue";
-import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
-import UpcomingEvents from "@/components/UpcomingEvents.vue";
-</script>
-
-<style scoped>
-.content {
-  position: relative;
-  z-index: 100;
-  margin-top: 100vh;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 20px;
-  background-color: #f8f8f8;
-}
-
-.news-updates,
-.upcoming-events {
-  flex: 1;
-  margin: 10px;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-    padding: 20px;
-  }
-}
-</style> -->
-
 <template>
   <SliderComponent />
   <div class="content">
     <WelcomeComponent />
     <about/>
-    <!-- <div class="main-content">
+     <!-- <div class="main-content">
       <UpcomingEvents class="upcoming-events" />
       <NewsAndUpdates class="news-updates" />
-    </div> -->
+    </div>  -->
   </div>
 </template>
 
 <script setup>
 import SliderComponent from "@/components/sliderComponent.vue";
 import WelcomeComponent from "@/components/WelcomeComponent.vue";
-import about from "@/views/AboutPage.vue";
+// import about from "@/views/AboutPage.vue";
 // import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
 // import UpcomingEvents from "@/components/UpcomingEvents.vue";
 </script>

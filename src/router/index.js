@@ -10,14 +10,14 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/about-takoradi-international-school",
+      path: "/about-takoradi-international-schools",
       name: "about-takoradi-international-school",
       component: () => import("../views/AboutPage.vue"),
     },
     {
-      path: "/about/our-history",
+      path: "/about-takoradi-international-school",
       name: "history",
-      component: () => import("../views/HistoryPage.vue"),
+      component: () => import("../views/AboutTIS.vue"),
     },
     {
       path: "/about/principal's-message",
@@ -25,9 +25,29 @@ const router = createRouter({
       component: () => import("../views/PrincipalMessage.vue"),
     },
     {
-      path: "/about/departments",
-      name: "departments",
-      component: () => import("../views/DepartmentsPage.vue"),
+      path: "/academic-programme",
+      name: "Academic Programme",
+      component: () => import("../views/AcademicProgramme.vue"),
+    },
+    {
+      path: "/academic-calender-and-events",
+      name: "Academic Calender And Events",
+      component: () => import("../views/AcademicCalender.vue"),
+    },
+    {
+      path: "/news-and-updates",
+      name: "News And Updates",
+      component: () => import("../views/NewsAndUpdates.vue"),
+    },
+    {
+      path: "/facilities",
+      name: "Facilities",
+      component: () => import("../views/FacilitiesPage.vue"),
+    },
+    {
+      path: "/management",
+      name: "management",
+      component: () => import("../views/ManagementTeam.vue"),
     },
     {
       path: "/gallery",
