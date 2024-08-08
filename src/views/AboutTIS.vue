@@ -57,27 +57,6 @@
               our evolving global society.
             </p>
           </div>
-
-          <!-- <div class="content-block uniform-block">
-            <h2>Uniform</h2>
-            <p>
-              The school provides a green and white uniform and supplies two
-              uniforms per child every academic year. P.E uniforms are available
-              on request but are supplied free to new entrants only.
-            </p>
-            <p>
-              Our students and pupils are expected to present themselves in a
-              neat and tidy fashion whilst engaging in school activities both on
-              and off the school campus.
-            </p>
-            <div class="uniform-image-wrapper">
-              <img
-                src="@/assets/images/staff.jpg"
-                alt="School Uniform"
-                class="uniform-image"
-              />
-            </div>
-          </div> -->
         </div>
       </section>
     </div>
@@ -143,7 +122,6 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding: 20px;
 }
 
 .page-title {
@@ -238,6 +216,14 @@
   }
   .content-block {
     width: 100%;
+  }
+  .page-title {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  .motto-text {
+    font-size: 30px;
   }
 }
 </style>

@@ -40,28 +40,29 @@
 <script setup>
 const newsItems = [
   {
-    title: "GIS’ Nathaniel Arkutu Wins 2023 World Food Day Poster Contest",
-    image: "@/assets/images/santakids.jpg",
+    title: "TIS Students Shine at Regional Science Fair",
+    image: "staff.jpg",
     message:
-      "Congratulations to Nathaniel Arkutu (Form 3Y) for placing First in the UN 2023 FAO (Food and Agriculture Organization)...",
+      "TIS students showcased their innovative projects at the Regional Science Fair, winning several awards and recognitions for their outstanding work...",
     link: "#",
   },
   {
-    title: "Congratulations Infant School",
-    image: "@/assets/images/santakids.jpg",
+    title: "TIS Hosts Annual Cultural Festival",
+    image: "staff.jpg",
     message:
-      "After the execution of a splendid Christmas show by the Infant School pupils, the Vice Principal of the section, Mrs....",
+      "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
     link: "#",
   },
   {
-    title: "TIME Conference is here again!",
-    image: "@/assets/images/santakids.jpg",
+    title: "TIS Sports Team Wins Championship",
+    image: "staff.jpg",
     message:
-      "Registration for the 7th TIME Educators Conference closes soon!!! Use this link (https://lnkd.in/dNJUjXTn) to register....",
+      "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
     link: "#",
   },
 ];
 </script>
+
 
 <style scoped>
 .news-page {
@@ -170,6 +171,14 @@ const newsItems = [
 @media (min-width: 768px) {
   .news-wrapper {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .page-title {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  .motto-text {
+    font-size: 30px;
   }
 }
 </style>

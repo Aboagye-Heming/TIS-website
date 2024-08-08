@@ -106,7 +106,6 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
-    padding: 20px;
   }
   
   .page-title {
@@ -207,6 +206,14 @@
     .content-block {
       width: 100%;
     }
+    .page-title {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  .motto-text {
+    font-size: 30px;
+  }
   }
   </style>
   

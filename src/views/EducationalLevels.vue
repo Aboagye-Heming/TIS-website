@@ -328,5 +328,13 @@
     padding: 10px;
     grid-template-columns: 1fr;
   }
+  .page-title {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  .motto-text {
+    font-size: 30px;
+  }
 }
 </style>

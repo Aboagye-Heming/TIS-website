@@ -219,6 +219,20 @@ onUnmounted(() => {
   font-weight: bold;
   text-decoration: none;
 }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 100%;
+  left: -26px;
+  width: 200px;
+  padding: 12px 0;
+  margin-top: 10px;
+  border-radius: 8px;
+  flex-direction: column;
+}
 
 @media screen and (max-width: 960px) {
   .nav-logo {
@@ -278,7 +292,7 @@ onUnmounted(() => {
   left: -26px;
   width: 200px;
   padding: 12px 0;
-  margin-top: 10px;
+  margin-top: 2px;
   border-radius: 8px;
   flex-direction: column;
 }
@@ -297,6 +311,7 @@ onUnmounted(() => {
   color: #84dd84;
   display: block;
   width: 100%;
+  padding: 0px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
