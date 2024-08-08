@@ -20,9 +20,9 @@ const router = createRouter({
       component: () => import("../views/AboutTIS.vue"),
     },
     {
-      path: "/about/principal's-message",
-      name: "message",
-      component: () => import("../views/PrincipalMessage.vue"),
+      path: "/about-educational-levels",
+      name: "Educational Levels",
+      component: () => import("../views/EducationalLevels.vue"),
     },
     {
       path: "/academic-programme",

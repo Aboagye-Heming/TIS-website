@@ -56,6 +56,7 @@
     </nav>
   </div>
 </template>
+
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
@@ -69,18 +70,17 @@ const navLinks = [
     text: "About",
     subLinks: [
       { to: "/about-takoradi-international-school", text: "About TIS" },
-      // { to: "/about-takoradi-international-schools", text: "About TIS" },
-      { to: "/about/principal's-message", text: "Schools" },
       { to: "/management", text: "Management Team" },
+      { to: "/about-educational-levels", text: "Educational Levels" },
       { to: "/academic-programme", text: "Academic Programme" },
       { to: "/facilities", text: "Facilities" },
-      { to: "/academic-calender-and-events", text: "Academic Calender And Events" },
+      {
+        to: "/academic-calender-and-events",
+        text: "Academic Calender And Events",
+      },
       { to: "/news-and-updates", text: "News And Updates" },
-      // { to: "/about/departments", text: "Departments" },
-      // { to: "/about/gallery", text: "Gallery" },
     ],
   },
-  // { to: "/gallery", text: "Gallery" },
   { to: "/contact", text: "Contact" },
 ];
 
@@ -104,6 +104,8 @@ function isDropdownOpen(linkText) {
 function handleClickOutside(event) {
   if (isMenuOpen.value && !event.target.closest(".navbar-container")) {
     closeMenu();
+  } else if (openDropdown.value && !event.target.closest(".dropdown")) {
+    openDropdown.value = null;
   }
 }
 
@@ -115,7 +117,10 @@ onUnmounted(() => {
   window.removeEventListener("click", handleClickOutside);
 });
 </script>
+
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 .navbar {
   background-color: #fff;
   height: 60px;
@@ -127,6 +132,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   z-index: 1000;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar-container {
@@ -270,7 +276,7 @@ onUnmounted(() => {
   z-index: 1000;
   top: 100%;
   left: -26px;
-  width: 140px;
+  width: 200px;
   padding: 12px 0;
   margin-top: 10px;
   border-radius: 8px;
@@ -289,9 +295,13 @@ onUnmounted(() => {
 
 .dropdown-item .nav-links {
   color: #84dd84;
+  display: block;
+  width: 100%;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-item .nav-links:hover {
   color: #40c055;
+  transform: translateX(-5px);
 }
 </style>

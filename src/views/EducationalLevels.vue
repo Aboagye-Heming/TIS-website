@@ -7,7 +7,7 @@
         class="school-image"
       />
       <div class="image-overlay">
-        <h1 class="page-title">Schools</h1>
+        <h1 class="page-title">Educational Levels</h1>
       </div>
     </div>
     <div class="container">
