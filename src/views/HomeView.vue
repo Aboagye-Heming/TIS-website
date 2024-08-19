@@ -13,6 +13,12 @@
 <script setup>
 import SliderComponent from "@/components/sliderComponent.vue";
 import WelcomeComponent from "@/components/WelcomeComponent.vue";
+import { onMounted } from 'vue';
+
+
+onMounted(() => {
+  document.title = 'TIS | Unity in Diversity';
+});
 // import about from "@/views/AboutPage.vue";
 // import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
 // import UpcomingEvents from "@/components/UpcomingEvents.vue";

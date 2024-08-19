@@ -7,7 +7,7 @@
           class="page-image"
         />
         <div class="image-overlay">
-          <h1 class="page-title">Academic Calendar and Events</h1>
+          <h1 class="page-title">Academic Calendar & Events</h1>
         </div>
       </div>
       <div class="container">
@@ -67,6 +67,11 @@
   </template>
   
   <script setup>
+  import { onMounted } from "vue";
+
+onMounted(() => {
+  document.title = "Academic Calender & Events | TIS ";
+});
   </script>
   
   <style scoped>
@@ -212,7 +217,7 @@
       grid-template-columns: 1fr;
     }
     .page-title {
-    font-size: 38px;
+    font-size: 34px;
     margin-bottom: 10px;
   }
 

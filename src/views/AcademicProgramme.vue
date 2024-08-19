@@ -49,6 +49,11 @@
   </template>
   
   <script setup>
+  import { onMounted } from "vue";
+
+onMounted(() => {
+  document.title = "Academic Programme | TIS ";
+});
   </script>
   
   <style scoped>

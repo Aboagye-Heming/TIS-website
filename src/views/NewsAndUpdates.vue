@@ -7,7 +7,7 @@
         class="page-image"
       />
       <div class="image-overlay">
-        <h1 class="page-title">News and Updates</h1>
+        <h1 class="page-title">News & Updates</h1>
       </div>
     </div>
     <div class="container">
@@ -28,7 +28,13 @@
               <p class="news-message">
                 {{ newsItem.message }}
               </p>
-              <a :href="newsItem.link" class="read-more">Read More</a>
+              <!-- <router-link
+                :to="{ name: 'NewsDetails', params: { id: newsItem.id } }"
+                class="read-more"
+                >Read More</router-link
+              > -->
+              <!-- <a :href="newsItem.link" class="read-more">Read More</a> -->
+
             </div>
           </div>
         </div>
@@ -38,31 +44,38 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+
+onMounted(() => {
+  document.title = "News & Updates | TIS ";
+});
 const newsItems = [
   {
+    id: 1, // Add unique ID
     title: "TIS Students Shine at Regional Science Fair",
     image: "staff.jpg",
     message:
       "TIS students showcased their innovative projects at the Regional Science Fair, winning several awards and recognitions for their outstanding work...",
-    link: "#",
+    link: "#", // This will be replaced by the router-link
   },
   {
+    id: 2, // Add unique ID
     title: "TIS Hosts Annual Cultural Festival",
     image: "staff.jpg",
     message:
       "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
-    link: "#",
+    link: "#", // This will be replaced by the router-link
   },
   {
+    id: 3, // Add unique ID
     title: "TIS Sports Team Wins Championship",
     image: "staff.jpg",
     message:
       "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
-    link: "#",
+    link: "#", // This will be replaced by the router-link
   },
 ];
 </script>
-
 
 <style scoped>
 .news-page {

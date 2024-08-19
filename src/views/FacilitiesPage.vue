@@ -59,6 +59,11 @@
   </template>
   
   <script setup>
+  import { onMounted } from "vue";
+
+onMounted(() => {
+  document.title = "Facilities | TIS ";
+});
   </script>
   
   <style scoped>

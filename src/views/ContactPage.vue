@@ -84,6 +84,12 @@
 import { reactive } from 'vue';
 import emailjs from '@emailjs/browser';
 // import Toast from '@/components/ToastLoader.vue';
+import { onMounted } from 'vue';
+
+
+onMounted(() => {
+  document.title = 'Contact Us | TIS';
+});
 
 const form = reactive({
   name: '',

@@ -63,7 +63,14 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue';
+
+
+onMounted(() => {
+  document.title = 'About TIS | TIS';
+});
+</script>
 
 <style scoped>
 @keyframes fadeIn {
@@ -131,6 +138,7 @@
   animation: titleFadeIn 1.5s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-decoration: underline;
+  margin-bottom: 10px;
 }
 
 .motto-text {
