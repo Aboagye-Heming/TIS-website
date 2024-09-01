@@ -66,7 +66,6 @@
 <script setup>
 import { onMounted } from 'vue';
 
-
 onMounted(() => {
   document.title = 'About TIS | TIS';
 });
@@ -174,6 +173,9 @@ onMounted(() => {
   padding: 20px;
   border-radius: 8px;
   box-sizing: border-box;
+  font-size: 18px; /* Increased for readability */
+
+  line-height: 1.6; /* Increased line height for better readability */
 }
 
 .content-block h2 {

@@ -19,7 +19,7 @@
             class="news-item"
           >
             <img
-              :src="newsItem.image"
+              :src="getImageUrl(newsItem.image)"
               :alt="newsItem.title"
               class="news-image"
             />
@@ -28,13 +28,10 @@
               <p class="news-message">
                 {{ newsItem.message }}
               </p>
-              <!-- <router-link
-                :to="{ name: 'NewsDetails', params: { id: newsItem.id } }"
-                class="read-more"
-                >Read More</router-link
-              > -->
-              <!-- <a :href="newsItem.link" class="read-more">Read More</a> -->
-
+              <!-- Read More button added here -->
+              <button @click="navigateToDetails(newsItem.id)" class="read-more">
+                Read More
+              </button>
             </div>
           </div>
         </div>
@@ -45,36 +42,48 @@
 
 <script setup>
 import { onMounted } from "vue";
+import { useRouter } from "vue-router";
 
+// Change the document title when the component is mounted
 onMounted(() => {
-  document.title = "News & Updates | TIS ";
+  document.title = "News & Updates | TIS";
 });
+
+// Array of news items
 const newsItems = [
   {
-    id: 1, // Add unique ID
+    id: 1,
     title: "TIS Students Shine at Regional Science Fair",
     image: "staff.jpg",
     message:
       "TIS students showcased their innovative projects at the Regional Science Fair, winning several awards and recognitions for their outstanding work...",
-    link: "#", // This will be replaced by the router-link
   },
   {
-    id: 2, // Add unique ID
+    id: 2,
     title: "TIS Hosts Annual Cultural Festival",
     image: "staff.jpg",
     message:
       "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
-    link: "#", // This will be replaced by the router-link
   },
   {
-    id: 3, // Add unique ID
+    id: 3,
     title: "TIS Sports Team Wins Championship",
     image: "staff.jpg",
     message:
       "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
-    link: "#", // This will be replaced by the router-link
   },
 ];
+
+// Function to dynamically resolve image paths
+function getImageUrl(imageName) {
+  return new URL(`../assets/images/${imageName}`, import.meta.url).href;
+}
+
+// Router instance to programmatically navigate to detail pages
+const router = useRouter();
+function navigateToDetails(id) {
+  router.push({ name: "News And Updates Details", params: { id } });
+}
 </script>
 
 <style scoped>
@@ -170,14 +179,19 @@ const newsItems = [
   color: #555;
 }
 
-.news-item a.read-more {
+.news-item .read-more {
   display: inline-block;
   margin-top: 10px;
   color: #007bff;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
 }
 
-.news-item a.read-more:hover {
+.news-item .read-more:hover {
   text-decoration: underline;
 }
 
@@ -188,10 +202,6 @@ const newsItems = [
   .page-title {
     font-size: 38px;
     margin-bottom: 10px;
-  }
-
-  .motto-text {
-    font-size: 30px;
   }
 }
 </style>

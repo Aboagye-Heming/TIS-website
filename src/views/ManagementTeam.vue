@@ -34,7 +34,7 @@
                 alt="Principal"
                 class="leader-image"
               />
-              <h3 class="leader-title">Principal</h3>
+              <h3 class="leader-title">Head Teacher</h3>
             </div>
             <div class="leader">
               <img
@@ -42,7 +42,7 @@
                 alt="Sectional Coordinator"
                 class="leader-image"
               />
-              <h3 class="leader-title">Sectional Coordinator</h3>
+              <h3 class="leader-title">Sectional Head (Upper and Secondary) </h3>
             </div>
             <div class="leader">
               <img
@@ -50,7 +50,7 @@
                 alt="Board Member"
                 class="leader-image"
               />
-              <h3 class="leader-title">Board Member</h3>
+              <h3 class="leader-title">Sectional Head (Primary)</h3>
             </div>
           </div>
         </div>
@@ -157,17 +157,16 @@ onMounted(() => {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 40px;
 }
 
 .content-block {
-  flex: 1;
-  min-width: 300px;
   animation: fadeIn 1s ease-in-out;
   padding: 20px;
   border-radius: 8px;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .content-block h2 {
@@ -180,18 +179,22 @@ onMounted(() => {
 
 .management-block {
   background-color: #e3f2fd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .leader-block {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
 }
 
 .leader {
   text-align: center;
   max-width: 300px;
+  flex: 1 1 300px; /* Adjust flex properties for responsiveness */
 }
 
 .leader-image {
@@ -218,8 +221,6 @@ onMounted(() => {
   }
   .content-wrapper {
     padding: 10px;
-    flex-direction: column;
-    align-items: center;
   }
   .content-block {
     width: 100%;
@@ -232,5 +233,15 @@ onMounted(() => {
   .motto-text {
     font-size: 30px;
   }
+
+  .leader-block {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .leader {
+    max-width: 100%; /* Make leaders full width on smaller screens */
+  }
 }
 </style>
+

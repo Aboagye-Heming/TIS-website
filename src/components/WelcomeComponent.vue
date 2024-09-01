@@ -43,7 +43,14 @@
 <script setup></script>
 
 <style scoped>
-/* Add scoped styles for your welcome section */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Consistent font family */
+}
+
+/* Welcome Section Styles */
 .welcome-section {
   background-color: #f8f8f8;
   padding: 40px 0;
@@ -86,8 +93,7 @@
 
 .welcome-headline {
   margin-bottom: 20px;
-
-  color: green;
+  color: #2c3e50; /* Professional dark blue */
 }
 
 .welcome-headline h3 {
@@ -97,12 +103,13 @@
 }
 
 .welcome-content {
-  font-size: 16px;
-  color: #666;
+  font-size: 18px; /* Increased for readability */
+  color: #333; /* Darker grey for better contrast */
+  line-height: 1.6; /* Improved line spacing */
 }
 
 .welcome-content p {
-  margin: 0 0 10px;
+  margin: 0 0 15px;
 }
 
 .welcome-content a {
@@ -113,6 +120,7 @@
 .welcome-content a:hover {
   text-decoration: underline;
 }
+
 @media (min-width: 960px) {
   .col-sm-4 {
     flex: 0 0 33.3333%;

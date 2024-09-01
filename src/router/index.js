@@ -39,11 +39,11 @@ const router = createRouter({
       name: "News And Updates",
       component: () => import("../views/NewsAndUpdates.vue"),
     },
-    // {
-    //   path: "/news-and-updates/:id",
-    //   name: "News And Updates Details",
-    //   component: () => import("../views/NewsAndUpdatesDetails.vue"),
-    // },
+    {
+      path: "/news-and-updates/:id",
+      name: "News And Updates Details",
+      component: () => import("../views/NewsAndUpdatesDetails.vue"),
+    },
     {
       path: "/facilities",
       name: "Facilities",

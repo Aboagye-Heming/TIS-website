@@ -5,48 +5,8 @@
         <h3>Contact Us</h3>
         <p>If you have any questions, feel free to reach out to us!</p>
       </div>
-      <div class="row">
-        <div class="col-sm-8">
-          <form class="contact-form" @submit.prevent="submitForm">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                v-model="form.name"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                v-model="form.email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                v-model="form.message"
-                rows="5"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-          </form>
-          <!-- <Toast
-            v-if="toast.visible"
-            :message="toast.message"
-            :type="toast.type"
-          /> -->
-        </div>
-        <div class="col-sm-4">
+      <div class="content">
+        <div class="address">
           <h4>Our Address</h4>
           <hr />
           <p>
@@ -54,10 +14,7 @@
             Box TD 453, Takoradi, Ghana-West Africa<br />
             Phone: +233 031 2025681/7090621<br />
             Email:
-            <a
-              href="mailto:info@tis-takoradi.com"
-              title="Send message"
-              target="_self"
+            <a href="mailto:info@tis-takoradi.com" title="Send message"
               >info@tis-takoradi.com</a
             >
           </p>
@@ -79,74 +36,12 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import { reactive } from 'vue';
-import emailjs from '@emailjs/browser';
-// import Toast from '@/components/ToastLoader.vue';
-import { onMounted } from 'vue';
-
-
-onMounted(() => {
-  document.title = 'Contact Us | TIS';
-});
-
-const form = reactive({
-  name: '',
-  email: '',
-  message: ''
-});
-
-const toast = reactive({
-  visible: false,
-  message: '',
-  type: 'success'
-});
-
-const submitForm = () => {
-  const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
-  const userId = import.meta.env.VITE_APP_EMAILJS_USER_ID;
-
-  const templateParams = {
-    name: form.name,
-    email: form.email,
-    message: form.message
-  };
-
-  emailjs.send(serviceId, templateId, templateParams, userId).then(
-    () => {
-      showToast('Your message has been sent successfully!', 'success');
-      resetForm();
-    },
-    (error) => {
-      showToast('Failed to send message. Please try again later.', 'error');
-      console.log('FAILED...', error);
-    }
-  );
-};
-
-const showToast = (message, type) => {
-  toast.message = message;
-  toast.type = type;
-  toast.visible = true;
-  setTimeout(() => {
-    toast.visible = false;
-  }, 3000);
-};
-
-const resetForm = () => {
-  form.name = '';
-  form.email = '';
-  form.message = '';
-};
-</script>
-
 <style scoped>
 .contact-section {
   background-color: #f8f8f8;
   padding: 50px 0;
   border-top: 1px solid #e7e7e7;
+  text-align: center; /* Center the text content */
 }
 
 .container {
@@ -156,7 +51,6 @@ const resetForm = () => {
 }
 
 .contact-headline {
-  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -173,56 +67,23 @@ const resetForm = () => {
   color: #666;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col-sm-8,
-.col-sm-4 {
-  flex: 1;
-  padding: 15px;
-}
-
-.contact-form {
+.content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center; /* Center the content horizontally */
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
+.address {
+  max-width: 800px; /* Set a max width for the address */
+  width: 100%;
 }
 
-.form-group label {
-  margin-bottom: 8px;
-  font-weight: bold;
+.address h4 {
   color: #333;
 }
 
-.form-group input,
-.form-group textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+.address p {
   color: #333;
-}
-
-button {
-  padding: 12px 20px;
-  background-color: #40c055;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #00ff2a;
 }
 
 .google-maps iframe {
@@ -232,17 +93,14 @@ button:hover {
   border-radius: 4px;
 }
 
+hr {
+  margin: 20px 0;
+}
+
 @media screen and (max-width: 768px) {
-  .col-sm-8,
-  .col-sm-4 {
-    flex: 1 1 100%;
+  .address {
     max-width: 100%;
     padding: 10px;
   }
-}
-
-.col-sm-4 h4,
-.col-sm-4 p {
-  color: #333;
 }
 </style>
