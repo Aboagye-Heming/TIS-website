@@ -145,7 +145,7 @@ onUnmounted(() => {
 }
 
 .nav-logo {
-  color: #84dd84;
+  color: #098044;
   font-size: 24px;
   text-decoration: none;
   cursor: pointer;
@@ -162,7 +162,7 @@ onUnmounted(() => {
 .bar {
   width: 100%;
   height: 2px;
-  background-color: #84dd84;
+  background-color: #098044;
   position: absolute;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -203,7 +203,7 @@ onUnmounted(() => {
 }
 
 .nav-links {
-  color: #84dd84;
+  color: #098044;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -215,7 +215,7 @@ onUnmounted(() => {
 }
 
 .nav-links.active {
-  color: #00ff2a;
+  color: #098044;
   font-weight: bold;
   text-decoration: none;
 }
@@ -308,7 +308,7 @@ onUnmounted(() => {
 }
 
 .dropdown-item .nav-links {
-  color: #84dd84;
+  color: #098044;
   display: block;
   width: 100%;
   padding: 0px;
