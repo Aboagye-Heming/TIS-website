@@ -93,7 +93,7 @@
 
 .welcome-headline {
   margin-bottom: 20px;
-  color: #2c3e50; /* Professional dark blue */
+  color: #098044;
 }
 
 .welcome-headline h3 {
