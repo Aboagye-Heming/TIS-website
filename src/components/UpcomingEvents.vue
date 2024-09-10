@@ -1,7 +1,7 @@
 <template>
   <div class="upcoming-events">
     <div class="event-item">
-      <h2 class="section-title">Upcoming Events</h2>
+      <h2 class="section-title">Upcoming Event</h2>
       <p class="event-date">{{ event.date }}</p>
       <h3 class="event-title">{{ event.title }}</h3>
       <p class="event-description">{{ event.description }}</p>
@@ -16,8 +16,9 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "9th Sepetember 2024",
-  title: "Secondary School Speech, Prize-Giving & Graduation Day",
+  date: "20th Sepetember 2024",
+  title:
+    "OPEN HOUSE FOR KINDERGARTEN AND PRIMARY SCHOOL PARENTS/GUARDIANS (MEET & GREET)",
   description: "",
   link: "/event-details",
 });
@@ -35,7 +36,7 @@ const event = ref({
 .section-title {
   font-size: 24px;
   font-weight: bold;
-  color: green;
+  color: #098044;
   margin-bottom: 20px;
 }
 

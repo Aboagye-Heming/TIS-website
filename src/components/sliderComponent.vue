@@ -15,9 +15,9 @@
 </template>
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import image1 from "@/assets/images/art_show.jpg";
+import image1 from "@/assets/images/kg_graduation_2.jpg";
 import image2 from "@/assets/images/artshow.jpg";
-import image3 from "@/assets/images/art_show.jpg";
+import image3 from "@/assets/images/upper_primary_excursion.jpg";
 
 const images = ref([
   { src: image1, text: "Welcome to Takoradi International School" },

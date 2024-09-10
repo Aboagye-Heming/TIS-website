@@ -2,9 +2,10 @@
   <div>
     <nav class="navbar">
       <div class="navbar-container">
-        <router-link to="/" class="nav-logo"
-          >Takoradi International School</router-link
-        >
+        <router-link to="/" class="nav-logo">
+          <img src="../assets/icons/nlogo.bmp" alt="Takoradi International School Logo" class="logo" />
+          <span class="school-name">Takoradi International School</span>
+        </router-link>
         <div
           class="menu-icon"
           :class="{ active: isMenuOpen }"
@@ -190,6 +191,9 @@ onUnmounted(() => {
 .menu-icon.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+.logo{
+  width: 20px;
+}
 
 .nav-menu {
   display: flex;
@@ -240,6 +244,15 @@ onUnmounted(() => {
   }
   .menu-icon {
     display: block;
+  }
+  /* .logo{
+    width: 20px;
+  } */
+  .logo {
+    width: 30px; /* Adjust as needed */
+  }
+  .school-name {
+    font-size: 14px; /* Adjust as needed */
   }
 
   .nav-menu {

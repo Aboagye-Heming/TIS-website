@@ -9,13 +9,17 @@
           :key="item.id"
           :class="{ active: index === currentIndex }"
         >
-          <img :src="item.imageUrl" :alt="item.altText" class="news-image" />
+          <img
+            :src="getImageUrl(item.image)"
+            :alt="item.title"
+            class="news-image"
+          />
           <div class="news-content">
             <h3 class="news-title">{{ item.title }}</h3>
-            <p class="news-description">{{ item.description }}</p>
-            <!-- <router-link :to="item.link" class="read-more"
+            <p class="news-description">{{ item.message }}</p>
+            <router-link :to="`/news-and-updates/${item.id}`" class="read-more"
               >Read More</router-link
-            > -->
+            >
           </div>
         </div>
       </transition-group>
@@ -25,32 +29,29 @@
 
 <script setup>
 import { ref } from "vue";
-import fistPumpsImage from "@/assets/images/fistpumps.jpg";
 
+// Array of news items
 const newsItems = ref([
   {
     id: 1,
-    imageUrl: fistPumpsImage,
-    altText: "News Image 1",
-    title: "Exciting News Event 1",
-    description: "This is a brief description of news event 1.",
-    link: "/news/1",
+    image: "staff.jpg",
+    title: "TIS Students Shine at Regional Science Fair",
+    message:
+      "TIS students showcased their innovative projects at the Regional Science Fair, winning several awards and recognitions for their outstanding work...",
   },
   {
     id: 2,
-    imageUrl: fistPumpsImage,
-    altText: "News Image 2",
-    title: "Exciting News Event 2",
-    description: "This is a brief description of news event 2.",
-    link: "/news/2",
+    image: "staff.jpg",
+    title: "TIS Hosts Annual Cultural Festival",
+    message:
+      "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
   },
   {
     id: 3,
-    imageUrl: fistPumpsImage,
-    altText: "News Image 3",
-    title: "Exciting News Event 3",
-    description: "This is a brief description of news event 3.",
-    link: "/news/3",
+    image: "staff.jpg",
+    title: "TIS Sports Team Wins Championship",
+    message:
+      "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
   },
 ]);
 
@@ -60,6 +61,11 @@ const intervalTime = 5000; // 5 seconds
 setInterval(() => {
   currentIndex.value = (currentIndex.value + 1) % newsItems.value.length;
 }, intervalTime);
+
+// Function to dynamically resolve image paths
+function getImageUrl(imageName) {
+  return new URL(`../assets/images/${imageName}`, import.meta.url).href;
+}
 </script>
 
 <style scoped>
@@ -72,7 +78,7 @@ setInterval(() => {
 .section-title {
   font-size: 32px;
   font-weight: bold;
-  color: green;
+  color: #098044;
   margin-bottom: 20px;
   margin-top: 0px;
 }
@@ -163,7 +169,6 @@ setInterval(() => {
   .news-image {
     max-width: 300px;
   }
-  
 }
 
 .slide-enter-active,

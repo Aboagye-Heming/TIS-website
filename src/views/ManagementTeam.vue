@@ -42,7 +42,7 @@
                 alt="Sectional Coordinator"
                 class="leader-image"
               />
-              <h3 class="leader-title">Sectional Head (Upper and Secondary) </h3>
+              <h3 class="leader-title">Sectional Head (Upper and Secondary)</h3>
             </div>
             <div class="leader">
               <img
@@ -179,9 +179,6 @@ onMounted(() => {
 
 .management-block {
   background-color: #e3f2fd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .leader-block {
@@ -194,7 +191,7 @@ onMounted(() => {
 .leader {
   text-align: center;
   max-width: 300px;
-  flex: 1 1 300px; /* Adjust flex properties for responsiveness */
+  flex: 1 1 300px;
 }
 
 .leader-image {
@@ -240,8 +237,7 @@ onMounted(() => {
   }
 
   .leader {
-    max-width: 100%; /* Make leaders full width on smaller screens */
+    max-width: 100%;
   }
 }
 </style>
-

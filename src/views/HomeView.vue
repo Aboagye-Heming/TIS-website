@@ -2,11 +2,11 @@
   <SliderComponent />
   <div class="content">
     <WelcomeComponent />
-    <about/>
-     <!-- <div class="main-content">
+    <!-- <about/> -->
+     <div class="main-content">
       <UpcomingEvents class="upcoming-events" />
       <NewsAndUpdates class="news-updates" />
-    </div>  -->
+    </div> 
   </div>
 </template>
 
@@ -20,8 +20,8 @@ onMounted(() => {
   document.title = 'TIS | Unity in Diversity';
 });
 // import about from "@/views/AboutPage.vue";
-// import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
-// import UpcomingEvents from "@/components/UpcomingEvents.vue";
+import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
+import UpcomingEvents from "@/components/UpcomingEvents.vue";
 </script>
 
 <style scoped>
