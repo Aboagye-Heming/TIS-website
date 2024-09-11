@@ -3,7 +3,11 @@
     <nav class="navbar">
       <div class="navbar-container">
         <router-link to="/" class="nav-logo">
-          <img src="../assets/icons/nlogo.bmp" alt="Takoradi International School Logo" class="logo" />
+          <img
+            src="../assets/icons/nlogo.bmp"
+            alt="Takoradi International School Logo"
+            class="logo"
+          />
           <span class="school-name">Takoradi International School</span>
         </router-link>
         <div
@@ -150,6 +154,17 @@ onUnmounted(() => {
   font-size: 24px;
   text-decoration: none;
   cursor: pointer;
+  display: flex; /* Align logo and text */
+  align-items: center; /* Align them vertically */
+}
+
+.logo {
+  width: 30px; /* Adjust the logo size */
+  margin-right: 10px; /* Adds a small gap between logo and school name */
+}
+
+.school-name {
+  font-size: 14px; /* Adjust as needed */
 }
 
 .menu-icon {
@@ -191,9 +206,6 @@ onUnmounted(() => {
 .menu-icon.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
-.logo{
-  width: 20px;
-}
 
 .nav-menu {
   display: flex;
@@ -223,6 +235,7 @@ onUnmounted(() => {
   font-weight: bold;
   text-decoration: none;
 }
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -242,15 +255,15 @@ onUnmounted(() => {
   .nav-logo {
     font-size: 16px;
   }
+
   .menu-icon {
     display: block;
   }
-  /* .logo{
-    width: 20px;
-  } */
+
   .logo {
     width: 30px; /* Adjust as needed */
   }
+
   .school-name {
     font-size: 14px; /* Adjust as needed */
   }
