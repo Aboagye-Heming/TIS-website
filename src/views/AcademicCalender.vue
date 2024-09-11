@@ -14,10 +14,36 @@
       <section class="calendar-content">
         <div class="content-wrapper">
           <div class="content-block calendar-block">
-            <h2>Academic Calendar</h2>
+            <h2>Academic Calendar for 2024-2025</h2>
             <p>
-              Our academic calendar outlines key dates and events for the school year. Stay informed about important dates such as term start and end dates, holidays, exam schedules, and more.
+              Our academic calendar outlines key dates and events for the upcoming school year. Below are the important dates to take note of:
             </p>
+
+            <!-- Term 1 -->
+            <h3>Term 1</h3>
+            <ul>
+              <li>Re-Opening: September 2, 2024 (Monday)</li>
+              <li>Vacating: December 13, 2024 (Friday)</li>
+              <li>Half-Term Break: Monday, 21st October to Friday, 25th October</li>
+            </ul>
+
+            <!-- Term 2 -->
+            <h3>Term 2</h3>
+            <ul>
+              <li>Re-Opening: January 6, 2025 (Monday)</li>
+              <li>Vacating: March 28, 2025 (Friday)</li>
+              <li>Half-Term Break: Thursday, 20th February to Monday, 24th February</li>
+            </ul>
+
+            <!-- Term 3 -->
+            <h3>Term 3</h3>
+            <ul>
+              <li>Re-Opening: April 14, 2025 (Monday)</li>
+              <li>Vacating: June 27, 2025 (Friday)</li>
+              <li>Last Day for KG & Primary: Tuesday, 24th June 2025</li>
+              <li>Last Day for Secondary: Wednesday, 25th June 2025</li>
+              <li>Last Day for Teaching Staff: Friday, 27th June 2025</li>
+            </ul>
 
             <!-- Dropdown for September Events -->
             <div class="dropdown">
@@ -78,6 +104,67 @@
                 </li>
               </ul>
             </div>
+
+            <!-- Dropdown for February Events -->
+            <div class="dropdown">
+              <button class="dropdown-toggle" @click="toggleDropdown('february')">
+                February 2025 Events
+              </button>
+              <ul v-if="isDropdownOpen.february" class="dropdown-menu">
+                <li v-for="event in eventsByMonth.february" :key="event.date">
+                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dropdown for March Events -->
+            <div class="dropdown">
+              <button class="dropdown-toggle" @click="toggleDropdown('march')">
+                March 2025 Events
+              </button>
+              <ul v-if="isDropdownOpen.march" class="dropdown-menu">
+                <li v-for="event in eventsByMonth.march" :key="event.date">
+                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dropdown for April Events -->
+            <div class="dropdown">
+              <button class="dropdown-toggle" @click="toggleDropdown('april')">
+                April 2025 Events
+              </button>
+              <ul v-if="isDropdownOpen.april" class="dropdown-menu">
+                <li v-for="event in eventsByMonth.april" :key="event.date">
+                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dropdown for May Events -->
+            <div class="dropdown">
+              <button class="dropdown-toggle" @click="toggleDropdown('may')">
+                May 2025 Events
+              </button>
+              <ul v-if="isDropdownOpen.may" class="dropdown-menu">
+                <li v-for="event in eventsByMonth.may" :key="event.date">
+                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dropdown for June Events -->
+            <div class="dropdown">
+              <button class="dropdown-toggle" @click="toggleDropdown('june')">
+                June 2025 Events
+              </button>
+              <ul v-if="isDropdownOpen.june" class="dropdown-menu">
+                <li v-for="event in eventsByMonth.june" :key="event.date">
+                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </section>
@@ -95,6 +182,11 @@ const isDropdownOpen = ref({
   november: false,
   december: false,
   january: false,
+  february: false,
+  march: false,
+  april: false,
+  may: false,
+  june: false,
 });
 
 // Event data categorized by month
@@ -112,23 +204,35 @@ const eventsByMonth = ref({
     { date: "Monday, 21st October to Friday, 25th October", event: "Half-term Break (School Closed)" },
   ],
   november: [
-    { date: "Wednesday, 6th November", event: "CNN Call to Earth Day – Launch" },
-    { date: "Monday, 11th November to Friday, 15th November", event: "Anti-Bullying Week (Theme: Choose Respect)" },
-    { date: "Friday, 22nd November", event: "Free Dress Day - Make a Contribution to Charity (Orphanage Drive)" },
-    { date: "Tuesday, 26th November", event: "End of Term 1 Assessments Begin for Secondary School" },
+    { date: "Friday, 1st November", event: "End of First Term Exams Begin (Secondary School)" },
+    { date: "Friday, 29th November", event: "Parents’ Day for Kindergarten and Primary Schools" },
   ],
   december: [
-    { date: "Tuesday, 3rd December", event: "End of Term 1 Assessments Begin for Kindergarten & Primary School" },
-    { date: "Friday, 6th December", event: "Farmer’s Day (Public Holiday) - School Closed" },
-    { date: "Thursday, 12th December", event: "Orphanage Drive Bake Sale (TBC)" },
-    { date: "Friday, 13th December", event: "End of Term 1 (Free Dress Day) - Election of School Prefects" },
+    { date: "Friday, 6th December", event: "Christmas Concert for Secondary School" },
+    { date: "Wednesday, 11th December", event: "Christmas Concert for Kindergarten and Primary Schools" },
+    { date: "Friday, 13th December", event: "End of Term 1 – Vacating Day" },
   ],
   january: [
-    { date: "Monday, 6th January", event: "School Re-opens for Term 2" },
+    { date: "Monday, 6th January", event: "School Re-opens – Term 2 Begins" },
+  ],
+  february: [
+    { date: "Thursday, 20th February", event: "Half-Term Break Begins" },
+    { date: "Monday, 24th February", event: "Half-Term Break Ends" },
+  ],
+  march: [
+    { date: "Friday, 28th March", event: "End of Term 2 – Vacating Day" },
+  ],
+  april: [
+    { date: "Monday, 14th April", event: "School Re-opens – Term 3 Begins" },
+  ],
+  may: [
+    { date: "Friday, 1st May", event: "Labour Day (Public Holiday) – School Closed" },
+  ],
+  june: [
+    { date: "Friday, 27th June", event: "End of Term 3 – Vacating Day" },
   ],
 });
 
-// Function to toggle dropdowns
 function toggleDropdown(month) {
   isDropdownOpen.value[month] = !isDropdownOpen.value[month];
 }
@@ -166,7 +270,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f3f4f6;
   margin-top: 50px;
 }

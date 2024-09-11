@@ -5,7 +5,7 @@
         <!-- Image Section -->
         <div class="col-sm-4 welcome-image-container">
           <img
-            src="@/assets/images/art_show.jpg"
+            src="@/assets/images/kg_kids_drone_shot.jpg"
             alt="School Image"
             class="welcome-image"
           />
@@ -47,7 +47,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif; /* Consistent font family */
+  font-family: "Arial", sans-serif; /* Consistent font family */
 }
 
 /* Welcome Section Styles */

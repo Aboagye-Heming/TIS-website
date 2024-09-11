@@ -2,7 +2,7 @@
   <section class="school-page">
     <div class="school-image-container">
       <img
-        src="@/assets/images/staff.jpg"
+        src="@/assets/images/kg_learning.jpg"
         alt="School Building"
         class="school-image"
       />

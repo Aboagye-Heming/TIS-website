@@ -2,7 +2,7 @@
     <section class="academic-programme-page">
       <div class="page-image-container">
         <img
-          src="@/assets/images/primary_graduation.jpg"
+          src="@/assets/images/kg_arts.jpg"
           alt="Academic Programme"
           class="page-image"
         />
