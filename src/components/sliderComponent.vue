@@ -17,7 +17,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import image1 from "@/assets/images/grade_6_girls_graduation.jpg";
+import image1 from "@/assets/images/kg_learning.jpg";
 import image2 from "@/assets/images/artshow.jpg";
 import image3 from "@/assets/images/upper_primary_excursion.jpg";
 
