@@ -179,6 +179,9 @@ onMounted(() => {
 
 .management-block {
   background-color: #e3f2fd;
+  font-size: 18px; /* Increased for readability */
+  color: #333; /* Darker grey for better contrast */
+  line-height: 2.0; /* Improved line spacing */
 }
 
 .leader-block {

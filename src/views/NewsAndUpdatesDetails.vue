@@ -26,7 +26,7 @@ const newsItems = [
     id: 1,
     title:
       "TIS Students Visit LOGOS Hope: A Journey of Learning and Inspiration",
-    image: "staff.jpg",
+    image: "logosHope.jpg",
     message:
       "TIS students recently had the unique opportunity to visit LOGOS Hope, the world’s largest floating book fair, during its stop at the local port. The students were welcomed aboard and immediately captivated by the vast collection of over 5,000 books, covering a wide range of topics including science, history, literature, and global cultures. LOGOS Hope’s mission of spreading knowledge and education through its extensive library resonated deeply with the students, who eagerly browsed the book collections, selecting titles that piqued their interest. \n\n" +
       "In addition to the book fair, the students participated in interactive workshops and engaged in discussions with the international crew members, gaining insights into life aboard a ship dedicated to education and cultural exchange. The experience broadened the students' understanding of global citizenship and inspired them to continue their pursuit of knowledge beyond the classroom. The visit to LOGOS Hope was not only an academic enrichment activity but also a cultural experience that left a lasting impression on both students and staff.",

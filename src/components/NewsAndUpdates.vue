@@ -34,19 +34,19 @@ import { ref } from "vue";
 const newsItems = ref([
   {
     id: 1,
-    image: "staff.jpg",
+    image: "logosHope.jpg",
     title:
       "TIS Students Visit Logos Hope Ship: A Journey of Learning and Inspiration",
     message:
-      "TIS students recently visited LOGOS Hope, the world’s largest floating book fair, where they explored a vast collection of books and engaged in educational workshops. The visit was an eye-opening experience, broadening their horizons on global cultures, knowledge, and community service...",
+      "TIS students recently had the unique opportunity to visit LOGOS Hope, the world’s largest floating book fair, during...",
   },
-  {
-    id: 2,
-    image: "staff.jpg",
-    title: "TIS Marks Safe and Health Week with Workshops and Activities",
-    message:
-      "TIS celebrated Safe & Health Week with a series of interactive workshops, health screenings, and activities aimed at promoting student well-being. The event highlighted the importance of physical and mental health, and students actively participated in discussions on safety practices, nutrition, and fitness...",
-  },
+  // {
+  //   id: 2,
+  //   image: "staff.jpg",
+  //   title: "TIS Marks Safe and Health Week with Workshops and Activities",
+  //   message:
+  //     "TIS celebrated Safe & Health Week with a series of interactive workshops, health screenings, and ...",
+  // },
   // {
   //   id: 3,
   //   image: "staff.jpg",
@@ -57,7 +57,7 @@ const newsItems = ref([
 ]);
 
 const currentIndex = ref(0);
-const intervalTime = 5000; // 5 seconds
+const intervalTime = 30000; // 30 seconds
 
 setInterval(() => {
   currentIndex.value = (currentIndex.value + 1) % newsItems.value.length;
@@ -80,7 +80,7 @@ function getImageUrl(imageName) {
   font-size: 32px;
   font-weight: bold;
   color: #098044;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-top: 0px;
 }
 
@@ -128,7 +128,9 @@ function getImageUrl(imageName) {
   max-height: 200px;
   object-fit: cover;
 }
-
+img{
+  border-radius: 10px;
+}
 .news-content {
   padding: 20px;
   text-align: center;
