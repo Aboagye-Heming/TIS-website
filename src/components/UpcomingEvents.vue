@@ -17,8 +17,7 @@ import { ref } from "vue";
 
 const event = ref({
   date: "4th October 2024",
-  title:
-    "Health & Safety Week: Social and Emotional Well-being",
+  title: "Health & Safety Week: Social and Emotional Well-being",
   description: "",
   link: "/event-details",
 });
@@ -46,6 +45,7 @@ const event = ref({
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 179px;
+  margin: 0 auto; /* Center the event item */
 }
 
 .event-date {
@@ -78,10 +78,43 @@ const event = ref({
   color: #1e7bb7;
 }
 
+/* Tablet and Above */
 @media (max-width: 768px) {
+  .upcoming-events {
+    max-width: 100%;
+    padding: 20px;
+  }
+
   .event-item {
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Increase margin for better spacing on smaller screens */
+  }
+
+  .section-title {
+    font-size: 22px; /* Slightly smaller for tablets and small screens */
+  }
+
+  .event-date,
+  .event-title,
+  .event-description {
+    font-size: 14px; /* Adjust text size for readability on smaller screens */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px; /* Further reduce font size for very small screens */
+  }
+
+  .event-date,
+  .event-title,
+  .event-description {
+    font-size: 12px; /* Make the text more compact */
+  }
+
+  .event-item {
+    padding: 15px; /* Reduce padding to fit smaller screens */
   }
 }
 </style>

@@ -51,27 +51,28 @@ onMounted(() => {
 
 // Array of news items
 const newsItems = [
-  {
+{
     id: 1,
-    title: "TIS Students Shine at Regional Science Fair",
-    image: "staff.jpg",
+    image: "logosHope.jpg",
+    title:
+      "TIS Students Visit Logos Hope Ship: A Journey of Learning and Inspiration",
     message:
-      "TIS students showcased their innovative projects at the Regional Science Fair, winning several awards and recognitions for their outstanding work...",
+      "TIS students recently had the unique opportunity to visit LOGOS Hope, the world’s largest floating book fair, during...",
   },
-  {
-    id: 2,
-    title: "TIS Hosts Annual Cultural Festival",
-    image: "staff.jpg",
-    message:
-      "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
-  },
-  {
-    id: 3,
-    title: "TIS Sports Team Wins Championship",
-    image: "staff.jpg",
-    message:
-      "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
-  },
+  // {
+  //   id: 2,
+  //   title: "TIS Hosts Annual Cultural Festival",
+  //   image: "staff.jpg",
+  //   message:
+  //     "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
+  // },
+  // {
+  //   id: 3,
+  //   title: "TIS Sports Team Wins Championship",
+  //   image: "staff.jpg",
+  //   message:
+  //     "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
+  // },
 ];
 
 // Function to dynamically resolve image paths
@@ -137,10 +138,10 @@ function navigateToDetails(id) {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #333;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -149,7 +150,7 @@ function navigateToDetails(id) {
 .news-item {
   display: flex;
   flex-direction: column;
-  background-color: #e8f5e9; /* Light green background */
+  background-color: #e8f5e9; 
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

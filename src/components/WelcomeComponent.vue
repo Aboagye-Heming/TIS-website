@@ -121,7 +121,8 @@
   text-decoration: underline;
 }
 
-@media (min-width: 960px) {
+/* Tablet and Above */
+@media (min-width: 768px) {
   .col-sm-4 {
     flex: 0 0 33.3333%;
     max-width: 33.3333%;
@@ -130,6 +131,44 @@
   .col-sm-8 {
     flex: 0 0 66.6666%;
     max-width: 66.6666%;
+  }
+}
+
+/* Mobile-friendly Styles */
+@media (max-width: 767px) {
+  .welcome-section {
+    padding: 20px 0;
+  }
+
+  .welcome-headline h3 {
+    font-size: 24px; /* Reduced font size for smaller screens */
+  }
+
+  .welcome-content {
+    font-size: 16px; /* Reduced font size for smaller screens */
+    line-height: 1.5; /* Adjust line-height for smaller text */
+  }
+
+  .welcome-content p {
+    margin-bottom: 10px; /* Reduced margin for tighter spacing */
+  }
+
+  .welcome-image {
+    max-width: 100%; /* Make image responsive */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-headline h3 {
+    font-size: 20px; /* Even smaller font size for very small screens */
+  }
+
+  .welcome-content {
+    font-size: 14px; /* Reduced text size for very small screens */
+  }
+
+  .welcome-content p {
+    margin-bottom: 8px; /* Tighter margin for very small screens */
   }
 }
 </style>
