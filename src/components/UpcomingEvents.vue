@@ -16,9 +16,9 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "20th Sepetember 2024",
+  date: "4th October 2024",
   title:
-    "OPEN HOUSE FOR KINDERGARTEN AND PRIMARY SCHOOL PARENTS/GUARDIANS (MEET & GREET)",
+    "Health & Safety Week: Social and Emotional Well-being",
   description: "",
   link: "/event-details",
 });
