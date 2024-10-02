@@ -48,12 +48,21 @@
               </ul>
             </div>
             <router-link
-              v-else
+              v-else-if="!link.external"
               :to="link.to"
               class="nav-links"
               @click="closeMenu"
               :class="{ active: $route.path === link.to }"
               >{{ link.text }}</router-link
+            >
+            <a
+              v-else
+              :href="link.to"
+              class="nav-links"
+              target="_blank"
+              rel="noopener noreferrer"
+              @click="closeMenu"
+              >{{ link.text }}</a
             >
           </li>
         </ul>
@@ -86,6 +95,7 @@ const navLinks = [
       { to: "/news-and-updates", text: "News And Updates" },
     ],
   },
+  { to: "https://smartskuls.com/", text: "Portal", external: true },
   { to: "/contact", text: "Contact" },
 ];
 

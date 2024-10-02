@@ -35,24 +35,25 @@ const newsItems = ref([
   {
     id: 1,
     image: "staff.jpg",
-    title: "TIS Students Shine at Regional Science Fair",
+    title:
+      "TIS Students Visit Logos Hope Ship: A Journey of Learning and Inspiration",
     message:
-      "TIS students showcased their innovative projects at the Regional Science Fair, winning several awards and recognitions for their outstanding work...",
+      "TIS students recently visited LOGOS Hope, the world’s largest floating book fair, where they explored a vast collection of books and engaged in educational workshops. The visit was an eye-opening experience, broadening their horizons on global cultures, knowledge, and community service...",
   },
   {
     id: 2,
     image: "staff.jpg",
-    title: "TIS Hosts Annual Cultural Festival",
+    title: "TIS Marks Safe and Health Week with Workshops and Activities",
     message:
-      "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
+      "TIS celebrated Safe & Health Week with a series of interactive workshops, health screenings, and activities aimed at promoting student well-being. The event highlighted the importance of physical and mental health, and students actively participated in discussions on safety practices, nutrition, and fitness...",
   },
-  {
-    id: 3,
-    image: "staff.jpg",
-    title: "TIS Sports Team Wins Championship",
-    message:
-      "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
-  },
+  // {
+  //   id: 3,
+  //   image: "staff.jpg",
+  //   title: "TIS Sports Team Wins Championship",
+  //   message:
+  //     "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
+  // },
 ]);
 
 const currentIndex = ref(0);

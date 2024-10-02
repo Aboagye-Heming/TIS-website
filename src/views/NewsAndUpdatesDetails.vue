@@ -24,18 +24,23 @@ import { useRoute } from "vue-router";
 const newsItems = [
   {
     id: 1,
-    title: "TIS Students Shine at Regional Science Fair",
+    title:
+      "TIS Students Visit LOGOS Hope: A Journey of Learning and Inspiration",
     image: "staff.jpg",
     message:
-      "TIS students showcased their innovative projects at the Regional Science Fair, winning several awards and recognitions for their outstanding work. The event was a testament to the creativity and hard work of the students, who presented a wide range of projects that impressed the judges. The students' achievements have brought pride to the school and have set a high standard for future participants.",
+      "TIS students recently had the unique opportunity to visit LOGOS Hope, the world’s largest floating book fair, during its stop at the local port. The students were welcomed aboard and immediately captivated by the vast collection of over 5,000 books, covering a wide range of topics including science, history, literature, and global cultures. LOGOS Hope’s mission of spreading knowledge and education through its extensive library resonated deeply with the students, who eagerly browsed the book collections, selecting titles that piqued their interest. \n\n" +
+      "In addition to the book fair, the students participated in interactive workshops and engaged in discussions with the international crew members, gaining insights into life aboard a ship dedicated to education and cultural exchange. The experience broadened the students' understanding of global citizenship and inspired them to continue their pursuit of knowledge beyond the classroom. The visit to LOGOS Hope was not only an academic enrichment activity but also a cultural experience that left a lasting impression on both students and staff.",
   },
   {
     id: 2,
-    title: "TIS Hosts Annual Cultural Festival",
+    title: "TIS Marks Safe and Health Week with Workshops and Activities",
     image: "staff.jpg",
     message:
-      "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures. The event was a colorful display of heritage and unity, as students and staff alike participated in the festivities. The festival is one of the highlights of the school year and serves as an opportunity for the TIS community to come together and celebrate the rich cultural diversity within the school.",
+      "TIS recently held its much-anticipated annual Safe and Health Week, a week-long event dedicated to promoting physical, mental, and emotional well-being among students and staff. The week was packed with a variety of activities including health screenings, fitness challenges, mental health workshops, and safety drills designed to equip the school community with vital knowledge on personal health and emergency preparedness. \n\n" +
+      "Highlights of the event included guest lectures by healthcare professionals who spoke on topics ranging from nutrition and exercise to stress management and first aid. Students had the chance to participate in practical workshops, learning CPR techniques and the importance of fire safety. Fitness challenges and yoga sessions were also organized, encouraging students to stay active and maintain a balanced lifestyle. \n\n" +
+      "The Safe and Health Week initiative reinforced the importance of well-being within the school community, providing students with essential tools and knowledge to maintain their health and safety. The event was a huge success and will continue to be a cornerstone of the school's commitment to nurturing well-rounded individuals.",
   },
+
   {
     id: 3,
     title: "TIS Sports Team Wins Championship",

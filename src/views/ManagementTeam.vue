@@ -27,7 +27,7 @@
             </p>
           </div>
 
-          <div class="content-block leader-block">
+          <!-- <div class="content-block leader-block">
             <div class="leader">
               <img
                 src="@/assets/images/kg_arts.jpg"
@@ -52,7 +52,7 @@
               />
               <h3 class="leader-title">Sectional Head (Primary)</h3>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>
