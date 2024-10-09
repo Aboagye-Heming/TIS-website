@@ -2,7 +2,7 @@
     <section class="facilities-page">
       <div class="page-image-container">
         <img
-          src="@/assets/images/sec_sports.jpg"
+          src="@/assets/images/pool2.jpg"
           alt="School Facilities"
           class="page-image"
         />

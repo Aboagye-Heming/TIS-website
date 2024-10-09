@@ -2,7 +2,7 @@
   <section class="calendar-page">
     <div class="page-image-container">
       <img
-        src="@/assets/images/kg_learning.jpg"
+        src="@/assets/images/learning.jpg"
         alt="Academic Calendar"
         class="page-image"
       />
