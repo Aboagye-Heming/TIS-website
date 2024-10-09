@@ -18,8 +18,8 @@
             />
           </div>
         </div>
-        <button class="prev" @click="prevSlide">&#10094;</button>
-        <button class="next" @click="nextSlide">&#10095;</button>
+        <!-- <button class="prev" @click="prevSlide">&#10094;</button>
+        <button class="next" @click="nextSlide">&#10095;</button> -->
       </div>
 
       <div class="news-details-content">
@@ -38,6 +38,10 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 
 // Sample newsItems array with multiple images per news item
+const route = useRoute();
+const newsItem = ref(null);
+const formattedMessage = ref("");
+const currentSlide = ref(0);
 const newsItems = [
   {
     id: 1,
@@ -50,25 +54,21 @@ const newsItems = [
   },
   {
     id: 2,
+    images: ["smile.jpg"],
+    title: "Commemoration of School’s 26th Anniversary / ‘World Smile Day’",
+    message:
+      "On Friday, 4th October, Takoradi International School celebrated its 26th anniversary, coinciding with ‘World Smile Day.’ The school organized a Free Dress Day where students were encouraged to wear yellow, symbolizing happiness and positivity. The day was filled with excitement as students exchanged thoughtful gifts with each other, fostering a sense of community and kindness. The celebration aimed to create an atmosphere of joy, while also reflecting on the school’s achievements and growth over the past 26 years. Various fun activities, including games and team-building exercises, were held to promote smiles and unity among the students, staff, and the wider school community.",
+  },
+
+  {
+    id: 3,
     title: "TIS Marks Safe and Health Week with Workshops and Activities",
     images: ["staff.jpg", "healthWeek.jpg"],
     message:
       "TIS recently held its much-anticipated annual Safe and Health Week, a week-long event dedicated to promoting physical, mental, and emotional well-being among students and staff.\n\n" +
       "The week was packed with a variety of activities including health screenings, fitness challenges, mental health workshops, and safety drills designed to equip the school community with vital knowledge.",
   },
-  {
-    id: 3,
-    title: "TIS Sports Team Wins Championship",
-    images: ["sportsTeam.jpg"],
-    message:
-      "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off.",
-  },
 ];
-
-const route = useRoute();
-const newsItem = ref(null);
-const formattedMessage = ref("");
-const currentSlide = ref(0);
 
 onMounted(() => {
   const id = parseInt(route.params.id);
@@ -91,22 +91,26 @@ function formatMessageWithParagraphs(message) {
 
 // Get image URLs
 function getImageUrls(imageNames) {
+  if (!Array.isArray(imageNames)) {
+    return []; // Return an empty array if imageNames is not an array
+  }
   return imageNames.map(
     (imageName) =>
       new URL(`../assets/images/${imageName}`, import.meta.url).href
   );
 }
 
-// Slide Navigation Functions
-function prevSlide() {
-  currentSlide.value =
-    (currentSlide.value - 1 + newsItem.value.images.length) %
-    newsItem.value.images.length;
-}
 
-function nextSlide() {
-  currentSlide.value = (currentSlide.value + 1) % newsItem.value.images.length;
-}
+// Slide Navigation Functions
+// function prevSlide() {
+//   currentSlide.value =
+//     (currentSlide.value - 1 + newsItem.value.images.length) %
+//     newsItem.value.images.length;
+// }
+
+// function nextSlide() {
+//   currentSlide.value = (currentSlide.value + 1) % newsItem.value.images.length;
+// }
 </script>
 
 <style scoped>
@@ -114,7 +118,7 @@ function nextSlide() {
   padding: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin-top: 24px;
 }
 
@@ -150,6 +154,9 @@ function nextSlide() {
   height: auto;
   object-fit: cover;
   border-radius: 8px;
+  max-width: 700px; 
+  max-height: 400px; 
+
 }
 
 /* Navigation Buttons */
@@ -218,7 +225,8 @@ function nextSlide() {
     margin-bottom: 12px; /* Reduced margin for smaller screens */
   }
 
-  .prev, .next {
+  .prev,
+  .next {
     padding: 8px; /* Slightly smaller button size for mobile */
   }
 }
@@ -236,5 +244,4 @@ function nextSlide() {
     font-size: 14px;
   }
 }
-
 </style>

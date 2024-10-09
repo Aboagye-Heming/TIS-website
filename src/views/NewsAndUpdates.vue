@@ -28,7 +28,6 @@
               <p class="news-message">
                 {{ newsItem.message }}
               </p>
-              <!-- Read More button added here -->
               <button @click="navigateToDetails(newsItem.id)" class="read-more">
                 Read More
               </button>
@@ -39,19 +38,16 @@
     </div>
   </section>
 </template>
-
 <script setup>
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 
-// Change the document title when the component is mounted
 onMounted(() => {
   document.title = "News & Updates | TIS";
 });
 
-// Array of news items
 const newsItems = [
-{
+  {
     id: 1,
     image: "logosHope.jpg",
     title:
@@ -59,35 +55,26 @@ const newsItems = [
     message:
       "TIS students recently had the unique opportunity to visit LOGOS Hope, the world’s largest floating book fair, during...",
   },
-  // {
-  //   id: 2,
-  //   title: "TIS Hosts Annual Cultural Festival",
-  //   image: "staff.jpg",
-  //   message:
-  //     "The annual cultural festival at TIS was a vibrant celebration of diversity, with students presenting traditional dances, music, and cuisine from various cultures...",
-  // },
-  // {
-  //   id: 3,
-  //   title: "TIS Sports Team Wins Championship",
-  //   image: "staff.jpg",
-  //   message:
-  //     "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
-  // },
+  {
+    id: 2,
+    image: "smile.jpg",
+    title: "Commemoration of School’s 26th Anniversary / ‘World Smile Day’",
+    message:
+      "On Friday, 4th October, TIS commemorated its 26th anniversary alongside ‘World Smile Day.’ Students participated in a... ",
+  },
 ];
 
-// Function to dynamically resolve image paths
 function getImageUrl(imageName) {
   return new URL(`../assets/images/${imageName}`, import.meta.url).href;
 }
 
-// Router instance to programmatically navigate to detail pages
 const router = useRouter();
 function navigateToDetails(id) {
   router.push({ name: "News And Updates Details", params: { id } });
 }
 </script>
-
 <style scoped>
+/* General page and container styling */
 .news-page {
   display: flex;
   flex-direction: column;
@@ -135,30 +122,29 @@ function navigateToDetails(id) {
 }
 
 .news-wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  /* background-color: #fff; */
-  color: #333;
-  border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
   gap: 20px;
 }
 
+/* News item block styling */
 .news-item {
-  display: flex;
-  flex-direction: column;
-  background-color: #e8f5e9; 
+  background-color: #e8f5e9;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .news-image {
   width: 100%;
-  height: auto;
+  max-width: 300px; /* Limit width for consistency */
+  max-height: 200px; /* Limit height to control image size */
   border-radius: 8px;
   object-fit: cover;
   margin-bottom: 15px;
@@ -196,13 +182,31 @@ function navigateToDetails(id) {
   text-decoration: underline;
 }
 
+/* Responsive layout for larger screens */
 @media (min-width: 768px) {
   .news-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    gap: 30px;
   }
+
   .page-title {
     font-size: 38px;
     margin-bottom: 10px;
   }
 }
+
+@media (min-width: 1024px) {
+  .news-wrapper {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .news-wrapper {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on extra large screens */
+    gap: 30px;
+  }
+}
 </style>
+

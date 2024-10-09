@@ -9,7 +9,8 @@
             Off Ama Akroma Street | Takoradi.<br />
             Box TD 453, Takoradi, Ghana-West Africa<br />
             Phone: +233 031 2025681/7090621<br />
-            Email: <a href="mailto:info@tis-takoradi.com" title="Send message" target="_self">info@tis-takoradi.com</a>
+            Email: 
+            <a href="mailto:info@tis-takoradi.com" title="Send message">info@tis-takoradi.com</a>
           </p>
         </div>
         <!-- Social Icons -->
@@ -21,6 +22,10 @@
             <li><a href="https://www.instagram.com/takoradi_international_school/" target="_blank"><img src="@/assets/icons/insta.svg" alt="Instagram"></a></li>
           </ul>
         </div>
+      </div>
+      <!-- Cambridge Logo -->
+      <div class="cambridge-logo">
+        <img src="@/assets/images/cambridge_logo.jpg" alt="Cambridge Logo" />
       </div>
     </div>
     <!-- Legal -->
@@ -37,6 +42,7 @@ export default {
   name: 'FooterComponent'
 };
 </script>
+
 <style scoped>
 .footer {
   background-color: #333;
@@ -105,6 +111,24 @@ export default {
   transform: scale(1.2);
 }
 
+.cambridge-logo {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cambridge-logo img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.cambridge-logo img:hover {
+  transform: scale(1.05);
+}
+
 .legal {
   background-color: #222;
   color: #aaa;
@@ -125,6 +149,10 @@ export default {
   .footer-content > div {
     margin: 10px 0;
   }
-}
 
+  .cambridge-logo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
 </style>

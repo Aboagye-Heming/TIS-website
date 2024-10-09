@@ -16,9 +16,9 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "4th October 2024",
+  date: "7th October 2024",
   title: "Health & Safety Week: Social and Emotional Well-being",
-  description: "",
+  description: "Join us for a week dedicated to promoting health and safety awareness focused on social and emotional well-being.",
   link: "/event-details",
 });
 </script>
@@ -44,8 +44,7 @@ const event = ref({
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 179px;
-  margin: 0 auto; /* Center the event item */
+  margin: 0 auto;
 }
 
 .event-date {
@@ -87,34 +86,45 @@ const event = ref({
 
   .event-item {
     max-width: 100%;
-    margin-bottom: 20px; /* Increase margin for better spacing on smaller screens */
+    margin-bottom: 20px;
   }
 
   .section-title {
-    font-size: 22px; /* Slightly smaller for tablets and small screens */
+    font-size: 22px;
   }
 
   .event-date,
   .event-title,
   .event-description {
-    font-size: 14px; /* Adjust text size for readability on smaller screens */
+    font-size: 14px;
   }
 }
 
 /* Mobile Styles */
 @media (max-width: 480px) {
   .section-title {
-    font-size: 20px; /* Further reduce font size for very small screens */
+    font-size: 18px; /* Reduced font size for very small screens */
+    margin-bottom: 15px;
   }
 
-  .event-date,
-  .event-title,
+  .event-date {
+    font-size: 14px; /* Adjusted for mobile readability */
+    margin-bottom: 8px;
+  }
+
+  .event-title {
+    font-size: 16px; /* Reduced for smaller screens */
+    margin-bottom: 8px;
+  }
+
   .event-description {
-    font-size: 12px; /* Make the text more compact */
+    font-size: 13px; /* Compact but legible */
+    margin-bottom: 12px;
+    line-height: 1.4;
   }
 
   .event-item {
-    padding: 15px; /* Reduce padding to fit smaller screens */
+    padding: 15px;
   }
 }
 </style>
