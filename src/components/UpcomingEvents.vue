@@ -16,9 +16,10 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "7th October 2024",
-  title: "Health & Safety Week: Social and Emotional Well-being",
-  description: "Join us for a week dedicated to promoting health and safety awareness focused on social and emotional well-being.",
+  date: "11th November 2024",
+  title: "Anti-Bullying Week: Choose Respect",
+  description:
+    "Join us for a week dedicated to promoting anti-bullying  awareness focused on choosing respect.",
   link: "/event-details",
 });
 </script>

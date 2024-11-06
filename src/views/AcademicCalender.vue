@@ -178,8 +178,8 @@ import { ref, onMounted } from "vue";
 // State to control dropdown visibility for each month
 const isDropdownOpen = ref({
   september: false,
-  october: true,
-  november: false,
+  october:  false,
+  november: true,
   december: false,
   january: false,
   february: false,
