@@ -264,13 +264,13 @@ const newsItems = ref([
     message:
       "On Friday, 4th October, TIS commemorated its 26th anniversary alongside ‘World Smile Day.’ Students participated in a... ",
   },
-  // {
-  //   id: 3,
-  //   image: "staff.jpg",
-  //   title: "TIS Sports Team Wins Championship",
-  //   message:
-  //     "Congratulations to the TIS sports team for their victory in the inter-school championship! The team's hard work and dedication have truly paid off...",
-  // },
+  {
+    id: 3,
+    image: "oddSocks.jpg",
+    title: "Odd Socks Day at TIS: Standing Together Against Bullying",
+    message:
+      "As part of Anti-Bullying Week, TIS celebrated Odd Socks Day, promoting kindness, respect, and individuality among students...",
+  },
 ]);
 
 const currentIndex = ref(0);

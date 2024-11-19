@@ -59,9 +59,22 @@ const newsItems = [
     message:
       "On Friday, 4th October, Takoradi International School celebrated its 26th anniversary, coinciding with ‘World Smile Day.’ The school organized a Free Dress Day where students were encouraged to wear yellow, symbolizing happiness and positivity. The day was filled with excitement as students exchanged thoughtful gifts with each other, fostering a sense of community and kindness. The celebration aimed to create an atmosphere of joy, while also reflecting on the school’s achievements and growth over the past 26 years. Various fun activities, including games and team-building exercises, were held to promote smiles and unity among the students, staff, and the wider school community.",
   },
-
   {
     id: 3,
+    title: "TIS Observes Anti-Bullying Week: Choose Respect",
+    images: ["oddSocks.jpg", "antiBullying2.jpg"],
+    message:
+      "Takoradi International School recently marked Anti-Bullying Week with the theme 'Choose Respect,' emphasizing the importance of fostering kindness, inclusivity, and mutual respect among students.\n\n" +
+      "The week began with an engaging presentation during Monday's assembly to introduce the theme. Students were encouraged to wear odd socks to celebrate individuality and the value of respecting differences. Tuesday continued the odd socks celebration, with students and staff showcasing their creative and colorful choices.\n\n" +
+      "Interactive workshops and role-playing sessions were held during the week, helping students learn to identify bullying behaviors, support peers, and report incidents effectively. A standout activity was the ‘Kindness Chain,’ where students wrote kind messages to one another, creating a vibrant display of positivity throughout the school.\n\n" +
+      "On Friday, the week culminated with another powerful presentation, reinforcing the message of respect and unity. Students and staff dressed in pink and purple, symbolizing compassion and empathy, creating a visually impactful end to the week.\n\n" +
+      'The event also featured a creative poster competition with the theme "Be a Buddy, Not a Bully," inspiring students to express their views on anti-bullying through art. Winning posters were displayed around the school to remind everyone of the value of compassion and respect.\n\n' +
+      "As the week concluded, students signed an Anti-Bullying Pledge, committing to uphold a culture of kindness and empathy in their daily interactions. The pledge ceremony was a heartfelt moment, reinforcing the importance of standing together against bullying.\n\n" +
+      "The success of Anti-Bullying Week at TIS underscores the school’s dedication to creating a safe and inclusive environment for all its students.",
+  },
+
+  {
+    id: 4,
     title: "TIS Marks Safe and Health Week with Workshops and Activities",
     images: ["staff.jpg", "healthWeek.jpg"],
     message:
@@ -99,7 +112,6 @@ function getImageUrls(imageNames) {
       new URL(`../assets/images/${imageName}`, import.meta.url).href
   );
 }
-
 
 // Slide Navigation Functions
 // function prevSlide() {
@@ -154,9 +166,8 @@ function getImageUrls(imageNames) {
   height: auto;
   object-fit: cover;
   border-radius: 8px;
-  max-width: 700px; 
-  max-height: 400px; 
-
+  max-width: 700px;
+  max-height: 400px;
 }
 
 /* Navigation Buttons */

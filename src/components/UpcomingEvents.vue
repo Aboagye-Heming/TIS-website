@@ -16,10 +16,10 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "11th November 2024",
-  title: "Anti-Bullying Week: Choose Respect",
+  date: "23th November 2024",
+  title: "Ophanage Drive: Bake Sale",
   description:
-    "Join us for a week dedicated to promoting anti-bullying  awareness focused on choosing respect.",
+    "Free Dress Day",
   link: "/event-details",
 });
 </script>

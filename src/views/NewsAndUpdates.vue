@@ -62,6 +62,13 @@ const newsItems = [
     message:
       "On Friday, 4th October, TIS commemorated its 26th anniversary alongside ‘World Smile Day.’ Students participated in a... ",
   },
+  {
+    id: 3,
+    image: "socks.jpg",
+    title: "Odd Socks Day at TIS: Standing Together Against Bullying",
+    message:
+      "As part of Anti-Bullying Week, TIS celebrated Odd Socks Day, promoting kindness, respect, and individuality among students...",
+  },
 ];
 
 function getImageUrl(imageName) {
@@ -204,9 +211,11 @@ function navigateToDetails(id) {
 
 @media (min-width: 1440px) {
   .news-wrapper {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on extra large screens */
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* 4 columns on extra large screens */
     gap: 30px;
   }
 }
 </style>
-
