@@ -16,10 +16,10 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "22nd November 2024",
-  title: "Ophanage Drive: Bake Sale",
+  date: "12th December 2024",
+  title: "ORPHANAGE DRIVE BAKE SALE",
   description:
-    "Free Dress Day",
+    "",
   link: "/event-details",
 });
 </script>
