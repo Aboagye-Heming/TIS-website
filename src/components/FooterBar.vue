@@ -9,8 +9,10 @@
             Off Ama Akroma Street | Takoradi.<br />
             Box TD 453, Takoradi, Ghana-West Africa<br />
             Phone: +233 031 2025681/7090621<br />
-            Email: 
-            <a href="mailto:info@tis-takoradi.com" title="Send message">info@tis-takoradi.com</a>
+            Email:
+            <a href="mailto:info@tis-takoradi.com" title="Send message"
+              >info@tis-takoradi.com</a
+            >
           </p>
         </div>
         <!-- Social Icons -->
@@ -18,8 +20,27 @@
           <h3>Go Social</h3>
           <p>Stay in touch with us:</p>
           <ul class="social-icons">
-            <li><a href="https://www.youtube.com/@takoradiinternationalschoo8233" target="_blank"><img src="@/assets/icons/youtube.svg" alt="YouTube"></a></li>
-            <li><a href="https://www.instagram.com/takoradi_international_school/" target="_blank"><img src="@/assets/icons/insta.svg" alt="Instagram"></a></li>
+            <li>
+              <a
+                href="https://www.youtube.com/@takoradiinternationalschoo8233"
+                target="_blank"
+                ><img src="@/assets/icons/youtube.svg" alt="YouTube"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/takoradi_international_school/"
+                target="_blank"
+                ><img src="@/assets/icons/insta.svg" alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/search?q=takoradi%20international%20school&t=1734564943058"
+                target="_blank"
+                ><img src="@/assets/icons/tiktok.svg" alt="TikTok"
+              /></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -39,7 +60,7 @@
 
 <script>
 export default {
-  name: 'FooterComponent'
+  name: "FooterComponent",
 };
 </script>
 

@@ -16,10 +16,9 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "12th December 2024",
-  title: "ORPHANAGE DRIVE BAKE SALE",
-  description:
-    "",
+  date: "6th January 2025",
+  title: "School Re-opens – Term 2 Begins",
+  description: "",
   link: "/event-details",
 });
 </script>
