@@ -16,7 +16,7 @@
             <div class="content-block facilities-block">
               <h2>Facilities</h2>
               <p>
-                The School consists of two buildings located on the Ama Akroma Road in
+                The school consists of two buildings located on the Ama Akroma Road in
                 Takoradi. Apart from the school having spacious and well-equipped
                 classrooms, there are specialized rooms including a science
                 laboratory, a well-resourced library, a computer laboratory, an Art

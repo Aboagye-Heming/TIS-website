@@ -179,9 +179,9 @@ import { ref, onMounted } from "vue";
 const isDropdownOpen = ref({
   september: false,
   october:  false,
-  november: true,
+  november: false,
   december: false,
-  january: false,
+  january: true,
   february: false,
   march: false,
   april: false,

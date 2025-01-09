@@ -52,7 +52,7 @@
     <!-- Legal -->
     <div class="legal">
       <div class="container">
-        <p>&copy; Takoradi International School | 2024.</p>
+        <p>&copy; Takoradi International School | 2025.</p>
       </div>
     </div>
   </footer>
@@ -134,7 +134,7 @@ export default {
 
 .cambridge-logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   margin: 20px 0;
 }
 

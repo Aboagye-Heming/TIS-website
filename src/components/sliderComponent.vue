@@ -20,11 +20,14 @@ import { ref, onMounted, onUnmounted } from "vue";
 import image1 from "@/assets/images/kg_learning.jpg";
 import image2 from "@/assets/images/artshow.jpg";
 import image3 from "@/assets/images/upper_primary_excursion.jpg";
+import image4 from "@/assets/images/fun1.jpeg";
+
 
 const images = ref([
   { src: image1, text: "Welcome to Takoradi International School" },
   { src: image2, text: "Explore Our Campus" },
   { src: image3, text: "Join Our Community" },
+  { src: image4, text: "Unleashing Fun and Learning Together" },
 ]);
 
 const currentIndex = ref(0);

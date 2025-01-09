@@ -5,7 +5,7 @@
         <!-- Image Section -->
         <div class="col-sm-4 welcome-image-container">
           <img
-            src="@/assets/images/kg_kids_drone_shot.jpg"
+            src="@/assets/images/exams3.jpeg"
             alt="School Image"
             class="welcome-image"
           />
