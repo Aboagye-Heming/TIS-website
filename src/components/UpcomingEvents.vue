@@ -45,6 +45,7 @@ const event = ref({
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  height: 250px;
 }
 
 .event-date {
