@@ -1,11 +1,9 @@
-// https://vitejs.dev/config/
 
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  base: "/TIS-website/",  
 
   plugins: [vue()],
   
@@ -17,7 +15,7 @@ export default defineConfig({
 
   build: {
     rollupOptions: {
-      external: [], // Ensure everything is bundled
+      external: [], 
     }
   }
 })
