@@ -16,9 +16,10 @@
 import { ref } from "vue";
 
 const event = ref({
-  date: "6th January 2025",
-  title: "School Re-opens – Term 2 Begins",
-  description: "",
+  date: "17th February 2025",
+  title: "Fun Sports Day",
+  description:
+    "A fun and exciting Sports Day, specially for our KG1 and KG2 students!",
   link: "/event-details",
 });
 </script>
