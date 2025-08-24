@@ -3,21 +3,20 @@
   <div class="content">
     <WelcomeComponent />
     <!-- <about/> -->
-     <div class="main-content">
+    <div class="main-content">
       <UpcomingEvents class="upcoming-events" />
       <NewsAndUpdates class="news-updates" />
-    </div> 
+    </div>
   </div>
 </template>
 
 <script setup>
 import SliderComponent from "@/components/sliderComponent.vue";
 import WelcomeComponent from "@/components/WelcomeComponent.vue";
-import { onMounted } from 'vue';
-
+import { onMounted } from "vue";
 
 onMounted(() => {
-  document.title = 'TIS | Unity in Diversity';
+  document.title = "TIS | Unity in Diversity";
 });
 // import about from "@/views/AboutPage.vue";
 import NewsAndUpdates from "@/components/NewsAndUpdates.vue";
