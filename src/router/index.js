@@ -30,9 +30,9 @@ const router = createRouter({
       component: () => import("../views/AcademicProgramme.vue"),
     },
     {
-      path: "/academic-calender-and-events",
-      name: "Academic Calender And Events",
-      component: () => import("../views/AcademicCalender.vue"),
+      path: "/academic-calendar-and-events",
+      name: "Academic Calendar And Events",
+      component: () => import("../views/AcademicCalendar.vue"),
     },
     {
       path: "/news-and-updates",

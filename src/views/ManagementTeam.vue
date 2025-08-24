@@ -23,7 +23,7 @@
               school financially, legally and academically. Monitoring the
               school’s curriculum, academic standards and other administrative
               duties are carried out by the head teacher/principal, who is
-              assisted by the four sectional coordinators.
+              assisted by two sectional heads and coordinators.
             </p>
           </div>
 
@@ -181,7 +181,7 @@ onMounted(() => {
   background-color: #e3f2fd;
   font-size: 18px; /* Increased for readability */
   color: #333; /* Darker grey for better contrast */
-  line-height: 2.0; /* Improved line spacing */
+  line-height: 2; /* Improved line spacing */
 }
 
 .leader-block {

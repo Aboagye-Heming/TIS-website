@@ -89,8 +89,8 @@ const navLinks = [
       { to: "/academic-programme", text: "Academic Programme" },
       { to: "/facilities", text: "Facilities" },
       {
-        to: "/academic-calender-and-events",
-        text: "Academic Calender And Events",
+        to: "/academic-calendar-and-events",
+        text: "Academic Calendar And Events",
       },
       { to: "/news-and-updates", text: "News And Updates" },
     ],

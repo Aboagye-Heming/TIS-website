@@ -284,8 +284,8 @@
           Directors is responsible for decisions that relate to the school
           financially, legally and academically. Monitoring the school’s
           curriculum, academic standards and other administrative duties are
-          carried out by the head teacher/principal, who is assisted by the four
-          sectional coordinators.
+          carried out by the head teacher/principal, who is assisted by two
+          sectional heads and coordinators.
         </p>
       </div>
     </div>
