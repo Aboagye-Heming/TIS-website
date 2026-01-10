@@ -14,105 +14,43 @@
       <section class="calendar-content">
         <div class="content-wrapper">
           <div class="content-block calendar-block">
-            <h2>Academic Calendar for 2024-2025</h2>
+            <h2>Academic Calendar – Term 2 (2026)</h2>
             <p>
-              Our academic calendar outlines key dates and events for the upcoming school year. Below are the important dates to take note of:
+              Our academic calendar outlines key dates and events for the
+              upcoming school year. Below are the important dates to take note
+              of:
             </p>
 
-            <!-- Term 1 -->
-            <h3>Term 1</h3>
-            <ul>
-              <li>Re-Opening: September 2, 2024 (Monday)</li>
-              <li>Vacating: December 13, 2024 (Friday)</li>
-              <li>Half-Term Break: Monday, 21st October to Friday, 25th October</li>
-            </ul>
-
-            <!-- Term 2 -->
-            <h3>Term 2</h3>
-            <ul>
-              <li>Re-Opening: January 6, 2025 (Monday)</li>
-              <li>Vacating: March 28, 2025 (Friday)</li>
-              <li>Half-Term Break: Thursday, 20th February to Monday, 24th February</li>
-            </ul>
-
-            <!-- Term 3 -->
-            <h3>Term 3</h3>
-            <ul>
-              <li>Re-Opening: April 14, 2025 (Monday)</li>
-              <li>Vacating: June 27, 2025 (Friday)</li>
-              <li>Last Day for KG & Primary: Tuesday, 24th June 2025</li>
-              <li>Last Day for Secondary: Wednesday, 25th June 2025</li>
-              <li>Last Day for Teaching Staff: Friday, 27th June 2025</li>
-            </ul>
-
             <!-- Dropdown for September Events -->
-            <div class="dropdown">
-              <button class="dropdown-toggle" @click="toggleDropdown('september')">
-                September 2024 Events
-              </button>
-              <ul v-if="isDropdownOpen.september" class="dropdown-menu">
-                <li v-for="event in eventsByMonth.september" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Dropdown for October Events -->
-            <div class="dropdown">
-              <button class="dropdown-toggle" @click="toggleDropdown('october')">
-                October 2024 Events
-              </button>
-              <ul v-if="isDropdownOpen.october" class="dropdown-menu">
-                <li v-for="event in eventsByMonth.october" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Dropdown for November Events -->
-            <div class="dropdown">
-              <button class="dropdown-toggle" @click="toggleDropdown('november')">
-                November 2024 Events
-              </button>
-              <ul v-if="isDropdownOpen.november" class="dropdown-menu">
-                <li v-for="event in eventsByMonth.november" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Dropdown for December Events -->
-            <div class="dropdown">
-              <button class="dropdown-toggle" @click="toggleDropdown('december')">
-                December 2024 Events
-              </button>
-              <ul v-if="isDropdownOpen.december" class="dropdown-menu">
-                <li v-for="event in eventsByMonth.december" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
-                </li>
-              </ul>
-            </div>
 
             <!-- Dropdown for January Events -->
             <div class="dropdown">
-              <button class="dropdown-toggle" @click="toggleDropdown('january')">
-                January 2025 Events
+              <button
+                class="dropdown-toggle"
+                @click="toggleDropdown('january')"
+              >
+                January 2026 Events
               </button>
               <ul v-if="isDropdownOpen.january" class="dropdown-menu">
                 <li v-for="event in eventsByMonth.january" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                  <span class="event-date">{{ event.date }}</span> -
+                  <span class="event-name">{{ event.event }}</span>
                 </li>
               </ul>
             </div>
 
             <!-- Dropdown for February Events -->
             <div class="dropdown">
-              <button class="dropdown-toggle" @click="toggleDropdown('february')">
-                February 2025 Events
+              <button
+                class="dropdown-toggle"
+                @click="toggleDropdown('february')"
+              >
+                February 2026 Events
               </button>
               <ul v-if="isDropdownOpen.february" class="dropdown-menu">
                 <li v-for="event in eventsByMonth.february" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                  <span class="event-date">{{ event.date }}</span> -
+                  <span class="event-name">{{ event.event }}</span>
                 </li>
               </ul>
             </div>
@@ -120,11 +58,12 @@
             <!-- Dropdown for March Events -->
             <div class="dropdown">
               <button class="dropdown-toggle" @click="toggleDropdown('march')">
-                March 2025 Events
+                March 2026 Events
               </button>
               <ul v-if="isDropdownOpen.march" class="dropdown-menu">
                 <li v-for="event in eventsByMonth.march" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                  <span class="event-date">{{ event.date }}</span> -
+                  <span class="event-name">{{ event.event }}</span>
                 </li>
               </ul>
             </div>
@@ -132,39 +71,41 @@
             <!-- Dropdown for April Events -->
             <div class="dropdown">
               <button class="dropdown-toggle" @click="toggleDropdown('april')">
-                April 2025 Events
+                April 2026 Events
               </button>
               <ul v-if="isDropdownOpen.april" class="dropdown-menu">
                 <li v-for="event in eventsByMonth.april" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                  <span class="event-date">{{ event.date }}</span> -
+                  <span class="event-name">{{ event.event }}</span>
                 </li>
               </ul>
             </div>
 
             <!-- Dropdown for May Events -->
-            <div class="dropdown">
+            <!-- <div class="dropdown">
               <button class="dropdown-toggle" @click="toggleDropdown('may')">
-                May 2025 Events
+                May 2026 Events
               </button>
               <ul v-if="isDropdownOpen.may" class="dropdown-menu">
                 <li v-for="event in eventsByMonth.may" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                  <span class="event-date">{{ event.date }}</span> -
+                  <span class="event-name">{{ event.event }}</span>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
             <!-- Dropdown for June Events -->
-            <div class="dropdown">
+            <!-- <div class="dropdown">
               <button class="dropdown-toggle" @click="toggleDropdown('june')">
-                June 2025 Events
+                June 2026 Events
               </button>
               <ul v-if="isDropdownOpen.june" class="dropdown-menu">
                 <li v-for="event in eventsByMonth.june" :key="event.date">
-                  <span class="event-date">{{ event.date }}</span> - <span class="event-name">{{ event.event }}</span>
+                  <span class="event-date">{{ event.date }}</span> -
+                  <span class="event-name">{{ event.event }}</span>
                 </li>
               </ul>
-            </div>
-
+            </div> -->
           </div>
         </div>
       </section>
@@ -178,7 +119,7 @@ import { ref, onMounted } from "vue";
 // State to control dropdown visibility for each month
 const isDropdownOpen = ref({
   september: false,
-  october:  false,
+  october: false,
   november: false,
   december: false,
   january: true,
@@ -191,46 +132,73 @@ const isDropdownOpen = ref({
 
 // Event data categorized by month
 const eventsByMonth = ref({
-  september: [
-    { date: "Friday, 20th September", event: "Open House for Kindergarten and Primary School Parents/Guardians (Meet & Greet)" },
-    { date: "Monday, 23rd September", event: "Kwame Nkrumah Memorial Day (Public Holiday) - School Closed" },
-  ],
-  october: [
-    { date: "Friday, 4th October", event: "Commemoration of School’s 26th Anniversary / ‘World Smile Day’ (Free Dress Day)" },
-    { date: "Monday, 7th October to Friday, 11th October", event: "Health & Safety Week – Social and Emotional Well-being" },
-    { date: "Thursday, 10th October", event: "Parents’ Evening (Kindergarten & Primary School)" },
-    { date: "Thursday, 17th October", event: "Parents’ Evening (Secondary School)" },
-    { date: "Monday, 21st October", event: "Staff CPD (No School)" },
-    { date: "Monday, 21st October to Friday, 25th October", event: "Half-term Break (School Closed)" },
-  ],
-  november: [
-    { date: "Friday, 1st November", event: "End of First Term Exams Begin (Secondary School)" },
-    { date: "Friday, 29th November", event: "Parents’ Day for Kindergarten and Primary Schools" },
-  ],
-  december: [
-    { date: "Friday, 6th December", event: "Christmas Concert for Secondary School" },
-    { date: "Wednesday, 11th December", event: "Christmas Concert for Kindergarten and Primary Schools" },
-    { date: "Friday, 13th December", event: "End of Term 1 – Vacating Day" },
-  ],
   january: [
-    { date: "Monday, 6th January", event: "School Re-opens – Term 2 Begins" },
+    {
+      date: "Friday, 2nd January",
+      event: "IGCSE Year 11 Mock 1 Written Examinations Begin",
+    },
+    { date: "Friday, 16th January", event: "Parent / Teacher Consultations" },
+    { date: "Friday, 30th January", event: "Free Dress Day" },
   ],
+
   february: [
-    { date: "Thursday, 20th February", event: "Half-Term Break Begins" },
-    { date: "Monday, 24th February", event: "Half-Term Break Ends" },
+    {
+      date: "Monday, 2nd – Sunday, 8th February",
+      event: "Storytelling Week (Theme: Soundtrack Your Story)",
+    },
+    {
+      date: "Thursday, 5th February",
+      event: "Primary School Parents & Guardians’ Evening",
+    },
+    {
+      date: "Monday, 9th February",
+      event: "Cambridge Checkpoint (Years 6 & 9) – Mock 1 Exams Begin",
+    },
+    {
+      date: "Tuesday, 10th February",
+      event:
+        "Safer Internet Day (Theme: Smart Tech, Safe Choices – Responsible Use of AI)",
+    },
+    {
+      date: "Thursday, 12th February",
+      event: "Secondary School Parents & Guardians’ Evening",
+    },
+    { date: "Friday, 13th – Wednesday, 18th February", event: "Sports’ Week" },
+    { date: "Thursday, 19th February", event: "Staff CPD (No School)" },
+    {
+      date: "Thursday, 19th – Monday, 23rd February",
+      event: "Half-Term Break (School Closed)",
+    },
+    { date: "Friday, 27th February", event: "Free Dress Day" },
   ],
+
   march: [
-    { date: "Friday, 28th March", event: "End of Term 2 – Vacating Day" },
+    {
+      date: "Monday, 2nd March",
+      event: "IGCSE Year 11 Mock 2 Written Examinations Begin",
+    },
+    {
+      date: "Thursday, 5th March",
+      event: "World Book Day (Theme: Reading for Pleasure)",
+    },
+    {
+      date: "Friday, 6th March",
+      event: "Independence Day (Public Holiday – School Closed)",
+    },
+    {
+      date: "Monday, 9th March",
+      event: "Cambridge Checkpoint (Years 6 & 9) – Mock 2 Exams Begin",
+    },
+    { date: "Wednesday, 18th March", event: "World Poetry Day Launch" },
+    { date: "Saturday, 21st March", event: "World Poetry Day Celebration" },
+    { date: "Wednesday, 25th March", event: "Open Day" },
+    {
+      date: "Friday, 27th March",
+      event: "International Day (Free Dress Day) – End of Term",
+    },
   ],
-  april: [
-    { date: "Monday, 14th April", event: "School Re-opens – Term 3 Begins" },
-  ],
-  may: [
-    { date: "Friday, 1st May", event: "Labour Day (Public Holiday) – School Closed" },
-  ],
-  june: [
-    { date: "Friday, 27th June", event: "End of Term 3 – Vacating Day" },
-  ],
+
+  april: [{ date: "Monday, 13th April", event: "School Reopens for Term 3" }],
 });
 
 function toggleDropdown(month) {
