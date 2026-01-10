@@ -22,14 +22,25 @@
           <h4>Google Maps</h4>
           <hr />
           <div class="google-maps">
-            <iframe
+            <!-- <iframe
               src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d127209.75565901627!2d-1.8300696036539128!3d4.888529365093292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0xfe77756f523c36d%3A0xdc83aa5017454e56!2stakoradi+international+school!3m2!1d4.888533!2d-1.7600289999999998!5e0!3m2!1sen!2sgh!4v1521009368169"
               width="100%"
               height="450"
               frameborder="0"
               style="border: 0"
               allowfullscreen
-            ></iframe>
+            ></iframe> -->
+
+            <iframe
+              src="https://www.google.com/maps?q=Takoradi+International+School&output=embed"
+              width="100%"
+              height="300"
+              style="border: 0; border-radius: 4px"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
           </div>
         </div>
       </div>
