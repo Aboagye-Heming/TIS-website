@@ -9,7 +9,10 @@
             Off Ama Akroma Street | Takoradi.<br />
             Box TD 453, Takoradi, Ghana-West Africa<br />
             Phone: +233 031 2025681/7090621<br />
-            Email: <a href="mailto:info@tis-takoradi.com" title="Send message" target="_self">info@tis-takoradi.com</a>
+            Email:
+            <a href="mailto:info@tis-takoradi.com" title="Send message"
+              >info@tis-takoradi.com</a
+            >
           </p>
         </div>
         <!-- Social Icons -->
@@ -17,16 +20,39 @@
           <h3>Go Social</h3>
           <p>Stay in touch with us:</p>
           <ul class="social-icons">
-            <li><a href="https://www.youtube.com/@takoradiinternationalschoo8233" target="_blank"><img src="@/assets/icons/youtube.svg" alt="YouTube"></a></li>
-            <li><a href="https://www.instagram.com/takoradi_international_school/" target="_blank"><img src="@/assets/icons/insta.svg" alt="Instagram"></a></li>
+            <li>
+              <a
+                href="https://www.youtube.com/@takoradiinternationalschoo8233"
+                target="_blank"
+                ><img src="@/assets/icons/youtube.svg" alt="YouTube"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/takoradi_international_school/"
+                target="_blank"
+                ><img src="@/assets/icons/insta.svg" alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/search?q=takoradi%20international%20school&t=1734564943058"
+                target="_blank"
+                ><img src="@/assets/icons/tiktok.svg" alt="TikTok"
+              /></a>
+            </li>
           </ul>
         </div>
+      </div>
+      <!-- Cambridge Logo -->
+      <div class="cambridge-logo">
+        <img src="@/assets/images/cambridge_logo.jpg" alt="Cambridge Logo" />
       </div>
     </div>
     <!-- Legal -->
     <div class="legal">
       <div class="container">
-        <p>&copy; Takoradi International School | 2024.</p>
+        <p>&copy; Takoradi International School | 2025.</p>
       </div>
     </div>
   </footer>
@@ -34,9 +60,10 @@
 
 <script>
 export default {
-  name: 'FooterComponent'
+  name: "FooterComponent",
 };
 </script>
+
 <style scoped>
 .footer {
   background-color: #333;
@@ -105,6 +132,24 @@ export default {
   transform: scale(1.2);
 }
 
+.cambridge-logo {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.cambridge-logo img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.cambridge-logo img:hover {
+  transform: scale(1.05);
+}
+
 .legal {
   background-color: #222;
   color: #aaa;
@@ -125,6 +170,10 @@ export default {
   .footer-content > div {
     margin: 10px 0;
   }
-}
 
+  .cambridge-logo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
 </style>

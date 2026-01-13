@@ -163,3 +163,5 @@ const events = [
   color: #666;
 }
 </style>
+constant = 12
+hems = constant * 2

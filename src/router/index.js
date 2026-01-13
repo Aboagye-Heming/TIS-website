@@ -10,24 +10,49 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/about-takoradi-international-school",
+      path: "/about-takoradi-international-schools",
       name: "about-takoradi-international-school",
       component: () => import("../views/AboutPage.vue"),
     },
     {
-      path: "/about/our-history",
+      path: "/about-takoradi-international-school",
       name: "history",
-      component: () => import("../views/HistoryPage.vue"),
+      component: () => import("../views/AboutTIS.vue"),
     },
     {
-      path: "/about/principal's-message",
-      name: "message",
-      component: () => import("../views/PrincipalMessage.vue"),
+      path: "/about-educational-levels",
+      name: "Educational Levels",
+      component: () => import("../views/EducationalLevels.vue"),
     },
     {
-      path: "/about/departments",
-      name: "departments",
-      component: () => import("../views/DepartmentsPage.vue"),
+      path: "/academic-programme",
+      name: "Academic Programme",
+      component: () => import("../views/AcademicProgramme.vue"),
+    },
+    {
+      path: "/academic-calendar-and-events",
+      name: "Academic Calendar And Events",
+      component: () => import("../views/AcademicCalendar.vue"),
+    },
+    {
+      path: "/news-and-updates",
+      name: "News And Updates",
+      component: () => import("../views/NewsAndUpdates.vue"),
+    },
+    {
+      path: "/news-and-updates/:id",
+      name: "News And Updates Details",
+      component: () => import("../views/NewsAndUpdatesDetails.vue"),
+    },
+    {
+      path: "/facilities",
+      name: "Facilities",
+      component: () => import("../views/FacilitiesPage.vue"),
+    },
+    {
+      path: "/management",
+      name: "management",
+      component: () => import("../views/ManagementTeam.vue"),
     },
     {
       path: "/gallery",

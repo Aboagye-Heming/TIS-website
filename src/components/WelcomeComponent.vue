@@ -5,7 +5,7 @@
         <!-- Image Section -->
         <div class="col-sm-4 welcome-image-container">
           <img
-            src="@/assets/images/art_show.jpg"
+            src="@/assets/images/exams3.jpeg"
             alt="School Image"
             class="welcome-image"
           />
@@ -43,7 +43,14 @@
 <script setup></script>
 
 <style scoped>
-/* Add scoped styles for your welcome section */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif; /* Consistent font family */
+}
+
+/* Welcome Section Styles */
 .welcome-section {
   background-color: #f8f8f8;
   padding: 40px 0;
@@ -86,8 +93,7 @@
 
 .welcome-headline {
   margin-bottom: 20px;
-
-  color: green;
+  color: #098044;
 }
 
 .welcome-headline h3 {
@@ -97,12 +103,13 @@
 }
 
 .welcome-content {
-  font-size: 16px;
-  color: #666;
+  font-size: 18px; /* Increased for readability */
+  color: #333; /* Darker grey for better contrast */
+  line-height: 1.6; /* Improved line spacing */
 }
 
 .welcome-content p {
-  margin: 0 0 10px;
+  margin: 0 0 15px;
 }
 
 .welcome-content a {
@@ -113,7 +120,9 @@
 .welcome-content a:hover {
   text-decoration: underline;
 }
-@media (min-width: 960px) {
+
+/* Tablet and Above */
+@media (min-width: 768px) {
   .col-sm-4 {
     flex: 0 0 33.3333%;
     max-width: 33.3333%;
@@ -122,6 +131,44 @@
   .col-sm-8 {
     flex: 0 0 66.6666%;
     max-width: 66.6666%;
+  }
+}
+
+/* Mobile-friendly Styles */
+@media (max-width: 767px) {
+  .welcome-section {
+    padding: 20px 0;
+  }
+
+  .welcome-headline h3 {
+    font-size: 24px; /* Reduced font size for smaller screens */
+  }
+
+  .welcome-content {
+    font-size: 16px; /* Reduced font size for smaller screens */
+    line-height: 1.5; /* Adjust line-height for smaller text */
+  }
+
+  .welcome-content p {
+    margin-bottom: 10px; /* Reduced margin for tighter spacing */
+  }
+
+  .welcome-image {
+    max-width: 100%; /* Make image responsive */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-headline h3 {
+    font-size: 20px; /* Even smaller font size for very small screens */
+  }
+
+  .welcome-content {
+    font-size: 14px; /* Reduced text size for very small screens */
+  }
+
+  .welcome-content p {
+    margin-bottom: 8px; /* Tighter margin for very small screens */
   }
 }
 </style>

@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import HeaderTitle from "@/components/HeaderTitle.vue";
+import HeaderTitle from "@/components/ImageTitleComponent.vue";
 
 import { ref } from "vue";
 

@@ -2,9 +2,14 @@
   <div>
     <nav class="navbar">
       <div class="navbar-container">
-        <router-link to="/" class="nav-logo"
-          >Takoradi International School</router-link
-        >
+        <router-link to="/" class="nav-logo">
+          <img
+            src="../assets/icons/nlogo.bmp"
+            alt="Takoradi International School Logo"
+            class="logo"
+          />
+          <span class="school-name">Takoradi International School</span>
+        </router-link>
         <div
           class="menu-icon"
           :class="{ active: isMenuOpen }"
@@ -43,12 +48,21 @@
               </ul>
             </div>
             <router-link
-              v-else
+              v-else-if="!link.external"
               :to="link.to"
               class="nav-links"
               @click="closeMenu"
               :class="{ active: $route.path === link.to }"
               >{{ link.text }}</router-link
+            >
+            <a
+              v-else
+              :href="link.to"
+              class="nav-links"
+              target="_blank"
+              rel="noopener noreferrer"
+              @click="closeMenu"
+              >{{ link.text }}</a
             >
           </li>
         </ul>
@@ -56,6 +70,7 @@
     </nav>
   </div>
 </template>
+
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
@@ -64,18 +79,23 @@ const openDropdown = ref(null);
 
 const navLinks = [
   { to: "/", text: "Home" },
-  // {
-  //   to: "/about",
-  //   text: "About",
-  //   subLinks: [
-  //     { to: "/about/our-history", text: "Our History" },
-  //     { to: "/about-takoradi-international-school", text: "About TIS" },
-  //     { to: "/about/principal's-message", text: "Principal's Message" },
-  //     { to: "/about/departments", text: "Departments" },
-  //     { to: "/about/gallery", text: "Gallery" },
-  //   ],
-  // },
-  // { to: "/gallery", text: "Gallery" },
+  {
+    to: "/about",
+    text: "About",
+    subLinks: [
+      { to: "/about-takoradi-international-school", text: "About TIS" },
+      { to: "/management", text: "Management Team" },
+      { to: "/about-educational-levels", text: "Educational Levels" },
+      { to: "/academic-programme", text: "Academic Programme" },
+      { to: "/facilities", text: "Facilities" },
+      {
+        to: "/academic-calendar-and-events",
+        text: "Academic Calendar And Events",
+      },
+      { to: "/news-and-updates", text: "News And Updates" },
+    ],
+  },
+  { to: "https://smartskuls.com/", text: "Portal", external: true },
   { to: "/contact", text: "Contact" },
 ];
 
@@ -99,6 +119,8 @@ function isDropdownOpen(linkText) {
 function handleClickOutside(event) {
   if (isMenuOpen.value && !event.target.closest(".navbar-container")) {
     closeMenu();
+  } else if (openDropdown.value && !event.target.closest(".dropdown")) {
+    openDropdown.value = null;
   }
 }
 
@@ -110,7 +132,10 @@ onUnmounted(() => {
   window.removeEventListener("click", handleClickOutside);
 });
 </script>
+
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 .navbar {
   background-color: #fff;
   height: 60px;
@@ -122,6 +147,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   z-index: 1000;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar-container {
@@ -134,10 +160,21 @@ onUnmounted(() => {
 }
 
 .nav-logo {
-  color: #84dd84;
+  color: #098044;
   font-size: 24px;
   text-decoration: none;
   cursor: pointer;
+  display: flex; /* Align logo and text */
+  align-items: center; /* Align them vertically */
+}
+
+.logo {
+  width: 30px; /* Adjust the logo size */
+  margin-right: 10px; /* Adds a small gap between logo and school name */
+}
+
+.school-name {
+  font-size: 14px; /* Adjust as needed */
 }
 
 .menu-icon {
@@ -151,7 +188,7 @@ onUnmounted(() => {
 .bar {
   width: 100%;
   height: 2px;
-  background-color: #84dd84;
+  background-color: #098044;
   position: absolute;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -192,7 +229,7 @@ onUnmounted(() => {
 }
 
 .nav-links {
-  color: #84dd84;
+  color: #098044;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -204,17 +241,41 @@ onUnmounted(() => {
 }
 
 .nav-links.active {
-  color: #00ff2a;
+  color: #098044;
   font-weight: bold;
   text-decoration: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 100%;
+  left: -26px;
+  width: 200px;
+  padding: 12px 0;
+  margin-top: 10px;
+  border-radius: 8px;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 960px) {
   .nav-logo {
     font-size: 16px;
   }
+
   .menu-icon {
     display: block;
+  }
+
+  .logo {
+    width: 30px; /* Adjust as needed */
+  }
+
+  .school-name {
+    font-size: 14px; /* Adjust as needed */
   }
 
   .nav-menu {
@@ -265,9 +326,9 @@ onUnmounted(() => {
   z-index: 1000;
   top: 100%;
   left: -26px;
-  width: 140px;
+  width: 200px;
   padding: 12px 0;
-  margin-top: 10px;
+  margin-top: 2px;
   border-radius: 8px;
   flex-direction: column;
 }
@@ -283,10 +344,15 @@ onUnmounted(() => {
 }
 
 .dropdown-item .nav-links {
-  color: #84dd84;
+  color: #098044;
+  display: block;
+  width: 100%;
+  padding: 0px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-item .nav-links:hover {
   color: #40c055;
+  transform: translateX(-5px);
 }
 </style>
